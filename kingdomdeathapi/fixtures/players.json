@@ -1,0 +1,119 @@
+[
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 1,
+      "fields": {
+        "fullName": "Allison Knight",
+        "email": "twitwins@gmail.com",
+        "isGameMaster": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 2,
+      "fields": {
+        "email": "rockzak@gmail.com",
+        "fullName": "Zachary Rock",
+        "isGameMaster": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 3,
+      "fields": {
+        "email": "bobnewman@gmail.com",
+        "fullName": "Justin Newman",
+        "isGameMaster": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 4,
+      "fields": {
+        "email": "jjvduyne@funny.com",
+        "fullName": "Jonathan Vanduyne",
+        "isGameMaster": false
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 5,
+      "fields": {
+        "email": "lb27@gmail.com",
+        "fullName": "Lance Buckley",
+        "isGameMaster": false
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 6,
+      "fields": {
+        "email": "tmi19@gmail.com",
+        "fullName": "Thaxton Martinez",
+        "isGameMaster": false
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 7,
+      "fields": {
+        "email": "blah@n.com",
+        "fullName": "bah bah black sheep",
+        "isGameMaster": false
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 8,
+      "fields": {
+        "email": "bobobob@bobob.com",
+        "fullName": "bobobob",
+        "isGameMaster": false
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 9,
+      "fields": {
+        "email": "justin@newman.com",
+        "fullName": "justin newman",
+        "isGameMaster": false
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 10,
+      "fields": {
+        "email": "daniel@sucks.com",
+        "fullName": "Daniel",
+        "isGameMaster": false
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 11,
+      "fields": {
+        "email": "daniel@myers.com",
+        "fullName": "Danile Myers",
+        "isGameMaster": false
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 12,
+      "fields": {
+        "email": "hfisher@gmail.com",
+        "fullName": "Herald Fisher",
+        "isGameMaster": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.player",
+      "pk": 13,
+      "fields": {
+        "email": "catboi@gmail.com",
+        "fullName": "Bryan Newman",
+        "isGameMaster": false
+      }
+    }
+  ]
