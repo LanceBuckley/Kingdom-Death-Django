@@ -1,0 +1,114 @@
+[
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 1,
+      "fields": {
+        "name": "Bone",
+        "type": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 2,
+      "fields": {
+        "name": "Hide",
+        "type": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 3,
+      "fields": {
+        "name": "Organ",
+        "type": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 4,
+      "fields": {
+        "name": "Broken Lantern",
+        "type": 4
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 5,
+      "fields": {
+        "name": "Curious Hand",
+        "type": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 6,
+      "fields": {
+        "name": "Eye of Cat",
+        "type": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 7,
+      "fields": {
+        "name": "Golden Whiskers",
+        "type": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 8,
+      "fields": {
+        "name": "Great Cat Bone",
+        "type": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 9,
+      "fields": {
+        "name": "Lion Claw",
+        "type": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 10,
+      "fields": {
+        "name": "Lion Tail",
+        "type": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 11,
+      "fields": {
+        "name": "Lion Testes",
+        "type": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 12,
+      "fields": {
+        "name": "Shimmering Mane",
+        "type": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 13,
+      "fields": {
+        "name": "Sinew",
+        "type": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 14,
+      "fields": {
+        "name": "White Fur",
+        "type": 1
+      }
+    }
+  ]
