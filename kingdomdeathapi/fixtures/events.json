@@ -1,0 +1,58 @@
+[
+    {
+      "model": "kingdomdeathapi.event",
+      "pk": 1,
+      "fields": {
+        "name": "Acid Storm"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.event",
+      "pk": 2,
+      "fields": {
+        "name": "Clinging Mist"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.event",
+      "pk": 3,
+      "fields": {
+        "name": "Cracks In The Ground"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.event",
+      "pk": 4,
+      "fields": {
+        "name": "Dark Dentist"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.event",
+      "pk": 5,
+      "fields": {
+        "name": "Dark Trader"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.event",
+      "pk": 6,
+      "fields": {
+        "name": "Elder Council"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.event",
+      "pk": 7,
+      "fields": {
+        "name": "First Day"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.event",
+      "pk": 8,
+      "fields": {
+        "name": "Glossolalia"
+      }
+    }
+  ]

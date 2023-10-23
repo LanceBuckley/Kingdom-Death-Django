@@ -1,0 +1,30 @@
+[
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 1,
+      "fields": {
+        "type": "First Child Born"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 2,
+      "fields": {
+        "type": "First Death"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 3,
+      "fields": {
+        "type": "Population Reaches 15"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 4,
+      "fields": {
+        "type": "Innovations Reaches 5"
+      }
+    }
+  ]
