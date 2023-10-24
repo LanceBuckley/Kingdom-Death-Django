@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    'repairsapi',
+    'kingdomdeathapi',
 ]
 
 REST_FRAMEWORK = {

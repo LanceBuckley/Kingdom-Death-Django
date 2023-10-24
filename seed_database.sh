@@ -7,8 +7,10 @@ python3 manage.py makemigrations kingdomdeathapi
 python3 manage.py migrate kingdomdeathapi
 python3 manage.py loaddata users
 python3 manage.py loaddata tokens
-python3 manage.py loaddata contractors
-python3 manage.py loaddata jobs
-python3 manage.py loaddata fields
-python3 manage.py loaddata job_fields
-python3 manage.py loaddata bids
+python3 manage.py loaddata players
+python3 manage.py loaddata settlements
+python3 manage.py loaddata resource_types
+python3 manage.py loaddata resources
+python3 manage.py loaddata events
+python3 manage.py loaddata milestones
+python3 manage.py loaddata achieved_milestones
