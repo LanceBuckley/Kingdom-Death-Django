@@ -2,14 +2,13 @@ import json
 from rest_framework import status
 from rest_framework.test import APITestCase
 from django.contrib.auth.models import User
-from kingdomdeathapi.models import Player, Job, Field, JobField, Bid
+from kingdomdeathapi.models import Player
 from rest_framework.authtoken.models import Token
 
 
 class PlayerTests(APITestCase):
 
-    fixtures = ['users', 'tokens', 'players',
-               'jobs', 'fields', 'job_fields', 'bids']
+    fixtures = ['users', 'tokens', 'players',]
 
     def setUp(self):
         # Try to retrieve the first existing Player object
