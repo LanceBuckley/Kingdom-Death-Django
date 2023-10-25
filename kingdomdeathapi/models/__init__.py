@@ -5,3 +5,4 @@ from .player import Player
 from .resource import Resource
 from .resource_type import ResourceType
 from .settlement import Settlement
+from .weapon_proficiency import WeaponProficiency
