@@ -23,16 +23,8 @@ class PlayerTests(APITestCase):
         Ensure we can get an existing player
         """
 
-        # Seed the database with a user (use a unique username)
-        user = User.objects.create(username="gatoradephilips", password="password", first_name="Gatorade", last_name="Philips",
-                                   email="gatorade@philips.com", is_staff=False, is_active=True, date_joined="2022-10-21T21:19:24.892Z")
-
-        # Seed the database with a player
-        player = Player.objects.create(
-            user=user, game_master=True)
-
         # Initiate request and store response
-        response = self.client.get(f"/players/{player.id}")
+        response = self.client.get(f"/players/{self.player.id}")
 
         # Parse the JSON in the response body
         json_response = json.loads(response.content)
@@ -47,13 +39,6 @@ class PlayerTests(APITestCase):
         """
         Ensure we can change an existing player.
         """
-        # Seed the database with a user (use a unique username)
-        user = User.objects.create(username="gatoradephilips", password="password", first_name="Gatorade", last_name="Philips",
-                                   email="gatorade@philips.com", is_staff=False, is_active=True, date_joined="2022-10-21T21:19:24.892Z")
-
-        # Seed the database with a player
-        player = Player.objects.create(
-            user=user, game_master=True)
 
         # DEFINE NEW PROPERTIES FOR GAME
         data = {
@@ -65,11 +50,12 @@ class PlayerTests(APITestCase):
         }
 
         response = self.client.put(
-            f"/players/{player.id}", data, format="json")
+            f"/players/{self.player.id}", data, format="json")
+        
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
         # GET player again to verify changes were made
-        response = self.client.get(f"/players/{player.id}")
+        response = self.client.get(f"/players/{self.player.id}")
         json_response = json.loads(response.content)
 
         # Assert that the properties are correct
@@ -84,6 +70,7 @@ class PlayerTests(APITestCase):
         """
         Ensure we can delete an existing player.
         """
+        
         # Seed the database with a user (use a unique username)
         user = User.objects.create(username="gatoradephilips", password="password", first_name="Gatorade", last_name="Philips",
                                    email="gatorade@philips.com", is_staff=False, is_active=True, date_joined="2022-10-21T21:19:24.892Z")
