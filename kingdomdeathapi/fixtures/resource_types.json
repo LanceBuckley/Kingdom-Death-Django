@@ -1,27 +1,27 @@
 [
     {
-        "model": "kingdomdeathapi.resource_type",
+        "model": "kingdomdeathapi.resourcetype",
         "pk": 1,
         "fields": {
           "name": "Hide"
         }
     },
     {
-        "model": "kingdomdeathapi.resource_type",
+        "model": "kingdomdeathapi.resourcetype",
         "pk": 2,
         "fields": {
           "name": "Bone"
         }
     },
     {
-        "model": "kingdomdeathapi.resource_type",
+        "model": "kingdomdeathapi.resourcetype",
         "pk": 3,
         "fields": {
           "name": "Organ"
         }
     },
     {
-        "model": "kingdomdeathapi.resource_type",
+        "model": "kingdomdeathapi.resourcetype",
         "pk": 4,
         "fields": {
           "name": "Scrap"

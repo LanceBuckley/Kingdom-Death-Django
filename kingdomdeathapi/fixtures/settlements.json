@@ -4,9 +4,9 @@
       "pk": 1,
       "fields": {
         "name": "Yharnam",
-        "survivalLimit": "4",
+        "survival_limit": "4",
         "population": "3",
-        "userId": 1
+        "game_master": 1
       }
     },
     {
@@ -14,9 +14,9 @@
       "pk": 2,
       "fields": {
         "name": "Rocksville",
-        "survivalLimit": "3",
+        "survival_limit": "3",
         "population": "10",
-        "userId": 1
+        "game_master": 1
       }
     },
     {
@@ -24,9 +24,9 @@
       "pk": 3,
       "fields": {
         "name": "Kingdom of Zach",
-        "survivalLimit": "3",
+        "survival_limit": "3",
         "population": "4",
-        "userId": 2
+        "game_master": 2
       }
     },
     {
@@ -34,9 +34,9 @@
       "pk": 4,
       "fields": {
         "name": "Loser Town",
-        "survivalLimit": "8",
+        "survival_limit": "8",
         "population": "12",
-        "userId": 2
+        "game_master": 2
       }
     },
     {
@@ -44,9 +44,9 @@
       "pk": 5,
       "fields": {
         "name": "Bobobo",
-        "survivalLimit": "3",
+        "survival_limit": "3",
         "population": "6",
-        "userId": 3
+        "game_master": 3
       }
     },
     {
@@ -54,9 +54,9 @@
       "pk": 6,
       "fields": {
         "name": "Test",
-        "survivalLimit": "3",
+        "survival_limit": "3",
         "population": "8",
-        "userId": 3
+        "game_master": 3
       }
     },
     {
@@ -64,9 +64,9 @@
       "pk": 7,
       "fields": {
         "name": "Test 2",
-        "survivalLimit": "8",
+        "survival_limit": "8",
         "population": "9",
-        "userId": 3
+        "game_master": 3
       }
     },
     {
@@ -74,9 +74,9 @@
       "pk": 8,
       "fields": {
         "name": "Camelot",
-        "survivalLimit": "5",
+        "survival_limit": "5",
         "population": "12",
-        "userId": 1
+        "game_master": 1
       }
     },
     {
@@ -84,9 +84,9 @@
       "pk": 11,
       "fields": {
         "name": "Nashville",
-        "survivalLimit": "5",
+        "survival_limit": "5",
         "population": "39",
-        "userId": 1
+        "game_master": 1
       }
     }
   ]

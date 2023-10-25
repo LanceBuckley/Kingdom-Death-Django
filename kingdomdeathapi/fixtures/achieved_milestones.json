@@ -1,128 +1,128 @@
 [
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 1,
       "fields": {
-        "settlementId": 2,
-        "milestoneId": 1,
+        "settlement": 2,
+        "milestone": 1,
         "reached": true
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 2,
       "fields": {
-        "settlementId": 2,
-        "milestoneId": 3,
+        "settlement": 2,
+        "milestone": 3,
         "reached": true
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 3,
       "fields": {
-        "settlementId": 2,
-        "milestoneId": 3,
+        "settlement": 2,
+        "milestone": 3,
         "reached": true
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 4,
       "fields": {
-        "settlementId": 1,
-        "milestoneId": 1,
+        "settlement": 1,
+        "milestone": 1,
         "reached": true
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 5,
       "fields": {
-        "milestoneId": 1,
+        "milestone": 1,
         "reached": true,
-        "settlementId": 8
+        "settlement": 8
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 6,
       "fields": {
-        "milestoneId": 2,
+        "milestone": 2,
         "reached": true,
-        "settlementId": 8
+        "settlement": 8
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 7,
       "fields": {
-        "milestoneId": 4,
+        "milestone": 4,
         "reached": true,
-        "settlementId": 8
+        "settlement": 8
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 12,
       "fields": {
-        "milestoneId": 2,
+        "milestone": 2,
         "reached": true,
-        "settlementId": 1
+        "settlement": 1
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 13,
       "fields": {
-        "milestoneId": 3,
+        "milestone": 3,
         "reached": true,
-        "settlementId": 1
+        "settlement": 1
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 14,
       "fields": {
-        "milestoneId": 3,
+        "milestone": 3,
         "reached": true,
-        "settlementId": 8
+        "settlement": 8
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 21,
       "fields": {
-        "milestoneId": 1,
+        "milestone": 1,
         "reached": true,
-        "settlementId": 11
+        "settlement": 11
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 22,
       "fields": {
-        "milestoneId": 2,
+        "milestone": 2,
         "reached": true,
-        "settlementId": 11
+        "settlement": 11
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 23,
       "fields": {
-        "milestoneId": 3,
+        "milestone": 3,
         "reached": true,
-        "settlementId": 11
+        "settlement": 11
       }
     },
     {
-      "model": "kingdomdeathapi.achieved_milestone",
+      "model": "kingdomdeathapi.achievedmilestone",
       "pk": 24,
       "fields": {
-        "milestoneId": 4,
+        "milestone": 4,
         "reached": true,
-        "settlementId": 11
+        "settlement": 11
       }
     }
   ]
