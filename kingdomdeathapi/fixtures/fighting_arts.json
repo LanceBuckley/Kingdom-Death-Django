@@ -1,0 +1,72 @@
+[
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 1,
+      "fields": {
+        "name": "Ambidextrous"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 2,
+      "fields": {
+        "name": "Berserker"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 3,
+      "fields": {
+        "name": "Clutch Fighter"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 4,
+      "fields": {
+        "name": "Combo Master"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 5,
+      "fields": {
+        "name": "Crazed"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 6,
+      "fields": {
+        "name": "Crossarm Block"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 7,
+      "fields": {
+        "name": "Double Dash"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 8,
+      "fields": {
+        "name": "Extra Sense"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 9,
+      "fields": {
+        "name": "Last Man Standing"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 10,
+      "fields": {
+        "name": "Leader"
+      }
+    }
+  ]

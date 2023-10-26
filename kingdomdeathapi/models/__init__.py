@@ -6,3 +6,5 @@ from .resource import Resource
 from .resource_type import ResourceType
 from .settlement import Settlement
 from .weapon_proficiency import WeaponProficiency
+from .fighting_art import FightingArt
+from .disorder import Disorder
