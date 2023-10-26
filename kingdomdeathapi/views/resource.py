@@ -10,7 +10,7 @@ class ResourceView(ViewSet):
     def list(self, request):
         """
         Summary:
-            Retrieve a list of settlements based on query parameters.
+            Retrieve a list of resources based on query parameters.
 
         Args:
             request (HttpRequest): The full HTTP request object.
@@ -18,27 +18,27 @@ class ResourceView(ViewSet):
         Returns:
             Response: A serialized dictionary and HTTP status 200 OK.
         """
-        settlements = Resource.objects.all()
+        resources = Resource.objects.all()
 
-        serializer = ResourceSerializer(settlements, many=True)
+        serializer = ResourceSerializer(resources, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def retrieve(self, request, pk=None):
         """
         Summary:
-            Retrieve a specific settlement by primary key.
+            Retrieve a specific resource by primary key.
 
         Args:
             request (HttpRequest): The full HTTP request object.
-            pk (int): The primary key of the settlement to retrieve.
+            pk (int): The primary key of the resource to retrieve.
 
         Returns:
-            Response: A serialized dictionary containing the settlement's data and HTTP status 200 OK,
-            or HTTP status 404 Not Found if the settlement with the specified primary key does not exist.
+            Response: A serialized dictionary containing the resource's data and HTTP status 200 OK,
+            or HTTP status 404 Not Found if the resource with the specified primary key does not exist.
         """
         try:
-            settlement = Resource.objects.get(pk=pk)
-            serializer = ResourceSerializer(settlement, many=False)
+            resource = Resource.objects.get(pk=pk)
+            serializer = ResourceSerializer(resource, many=False)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Resource.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -50,40 +50,40 @@ class ResourceView(ViewSet):
 
         Args:
             request (HttpRequest): The full HTTP request object.
-            pk (int): The primary key of the settlement to retrieve.
+            pk (int): The primary key of the resource to retrieve.
 
         Returns:
-            Response: A serialized dictionary containing the settlement's data and HTTP status 201 Created.
+            Response: A serialized dictionary containing the resource's data and HTTP status 201 Created.
         """
         type = ResourceType.objects.get(pk=request.data["type"])
 
-        settlement = Resource.objects.create(
+        resource = Resource.objects.create(
             name=request.data["name"],
             type=type
         )
 
-        serializer = ResourceSerializer(settlement, many=False)
+        serializer = ResourceSerializer(resource, many=False)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def update(self, request, pk=None):
         """
         Summary:
-            Update a specific settlement's user information by primary key.
+            Update a specific resource's user information by primary key.
 
         Args:
             request (HttpRequest): The full HTTP request object.
-            pk (int): The primary key of the settlement to update.
+            pk (int): The primary key of the resource to update.
 
         Returns:
-            Response: A successful HTTP status 204 No Content response after updating the settlement's user details,
-            or HTTP status 404 Not Found if the settlement with the specified primary key does not exist.
+            Response: A successful HTTP status 204 No Content response after updating the resource's user details,
+            or HTTP status 404 Not Found if the resource with the specified primary key does not exist.
         """
         try:
-            settlement = Resource.objects.get(pk=pk)
-            settlement.name = request.data["name"]
-            settlement.type = ResourceType.objects.get(
+            resource = Resource.objects.get(pk=pk)
+            resource.name = request.data["name"]
+            resource.type = ResourceType.objects.get(
                 pk=request.data["type"])
-            settlement.save()
+            resource.save()
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Resource.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -91,20 +91,20 @@ class ResourceView(ViewSet):
     def destroy(self, request, pk=None):
         """
         Summary:
-            Delete a specific settlement and associated user by primary key.
+            Delete a specific resource and associated user by primary key.
 
         Args:
             request (HttpRequest): The full HTTP request object.
-            pk (int): The primary key of the settlement to delete.
+            pk (int): The primary key of the resource to delete.
 
         Returns:
             Response: A successful HTTP status 204 No Content response after deletion,
-            or HTTP status 404 Not Found if the settlement with the specified primary key does not exist.
+            or HTTP status 404 Not Found if the resource with the specified primary key does not exist.
         """
 
         try:
-            settlement = Resource.objects.get(pk=pk)
-            settlement.delete()
+            resource = Resource.objects.get(pk=pk)
+            resource.delete()
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Resource.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
