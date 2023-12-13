@@ -1,4 +1,4 @@
-from .achieved_milestone import AchievedMilestone
+from .milestone import Milestone
 from .event import Event
 from .milestone_type import MilestoneType
 from .player import Player

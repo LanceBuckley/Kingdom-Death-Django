@@ -2,7 +2,7 @@ from rest_framework import serializers
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
-from kingdomdeathapi.models import Settlement, Player, AchievedMilestone
+from kingdomdeathapi.models import Settlement, Player
 
 
 class SettlementView(ViewSet):
@@ -119,16 +119,10 @@ class PlayerSerializer(serializers.ModelSerializer):
         model = Player
         fields = ('id', 'username',)
 
-class AchievedMilestoneSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = AchievedMilestone
-        fields = ('settlement', 'milestone', 'reached')
-
 class SettlementSerializer(serializers.ModelSerializer):
 
     game_master = PlayerSerializer(many=False)
-    achieved_milestones = AchievedMilestoneSerializer(many=True)
 
     class Meta:
         model = Settlement
-        fields = ('id', 'name', 'population', 'survival_limit', 'game_master', 'achieved_milestones',)
+        fields = ('id', 'name', 'population', 'survival_limit', 'game_master',)
