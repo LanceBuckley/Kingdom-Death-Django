@@ -3,28 +3,126 @@
       "model": "kingdomdeathapi.milestone",
       "pk": 1,
       "fields": {
-        "type": "First Child Born"
+        "settlement": 2,
+        "milestone_type": 1,
+        "achieved": true
       }
     },
     {
       "model": "kingdomdeathapi.milestone",
       "pk": 2,
       "fields": {
-        "type": "First Death"
+        "settlement": 2,
+        "milestone_type": 3,
+        "achieved": true
       }
     },
     {
       "model": "kingdomdeathapi.milestone",
       "pk": 3,
       "fields": {
-        "type": "Population Reaches 15"
+        "settlement": 2,
+        "milestone_type": 3,
+        "achieved": true
       }
     },
     {
       "model": "kingdomdeathapi.milestone",
       "pk": 4,
       "fields": {
-        "type": "Innovations Reaches 5"
+        "settlement": 1,
+        "milestone_type": 1,
+        "achieved": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 5,
+      "fields": {
+        "milestone_type": 1,
+        "achieved": true,
+        "settlement": 8
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 6,
+      "fields": {
+        "milestone_type": 2,
+        "achieved": true,
+        "settlement": 8
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 7,
+      "fields": {
+        "milestone_type": 4,
+        "achieved": true,
+        "settlement": 8
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 12,
+      "fields": {
+        "milestone_type": 2,
+        "achieved": true,
+        "settlement": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 13,
+      "fields": {
+        "milestone_type": 3,
+        "achieved": true,
+        "settlement": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 14,
+      "fields": {
+        "milestone_type": 3,
+        "achieved": true,
+        "settlement": 8
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 21,
+      "fields": {
+        "milestone_type": 1,
+        "achieved": true,
+        "settlement": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 22,
+      "fields": {
+        "milestone_type": 2,
+        "achieved": true,
+        "settlement": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 23,
+      "fields": {
+        "milestone_type": 3,
+        "achieved": true,
+        "settlement": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.milestone",
+      "pk": 24,
+      "fields": {
+        "milestone_type": 4,
+        "achieved": true,
+        "settlement": 11
       }
     }
   ]

@@ -1,0 +1,72 @@
+[
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 1,
+      "fields": {
+        "name": "Aichmophobia"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 2,
+      "fields": {
+        "name": "Anxiety"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 3,
+      "fields": {
+        "name": "Apathetic"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 4,
+      "fields": {
+        "name": "Binge Eating"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 5,
+      "fields": {
+        "name": "Coprolalia"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 6,
+      "fields": {
+        "name": "Fear of the Dark"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 7,
+      "fields": {
+        "name": "Hemophobia"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 8,
+      "fields": {
+        "name": "Immortal"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 9,
+      "fields": {
+        "name": "Quixotic"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 10,
+      "fields": {
+        "name": "Traumatized"
+      }
+    }
+  ]

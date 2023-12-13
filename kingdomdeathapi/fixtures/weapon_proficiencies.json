@@ -1,0 +1,79 @@
+[
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 1,
+      "fields": {
+        "name": "Axe"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 2,
+      "fields": {
+        "name": "Bow"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 3,
+      "fields": {
+        "name": "Club"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 4,
+      "fields": {
+        "name": "Dagger"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 5,
+      "fields": {
+        "name": "Fist&Tooth"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 6,
+      "fields": {
+        "name": "Grand"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 7,
+      "fields": {
+        "name": "Katar"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 8,
+      "fields": {
+        "name": "Shield"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 9,
+      "fields": {
+        "name": "Spear"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 10,
+      "fields": {
+        "name": "Sword"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 11,
+      "fields": {
+        "name": "Whip"
+      }
+    }
+  ]

@@ -1,20 +1,20 @@
 [
-    {
-      "model": "kingdomdeathapi.resource",
-      "pk": 1,
-      "fields": {
-        "name": "Bone",
-        "type": 2
-      }
-    },
-    {
-      "model": "kingdomdeathapi.resource",
-      "pk": 2,
-      "fields": {
-        "name": "Hide",
-        "type": 1
-      }
-    },
+  {
+    "model": "kingdomdeathapi.resource",
+    "pk": 1,
+    "fields": {
+      "name": "Hide",
+      "type": 1
+    }
+  },
+  {
+    "model": "kingdomdeathapi.resource",
+    "pk": 2,
+    "fields": {
+      "name": "Bone",
+      "type": 2
+    }
+  },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 3,

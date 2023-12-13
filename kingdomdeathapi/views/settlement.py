@@ -119,7 +119,6 @@ class PlayerSerializer(serializers.ModelSerializer):
         model = Player
         fields = ('id', 'username',)
 
-
 class SettlementSerializer(serializers.ModelSerializer):
 
     game_master = PlayerSerializer(many=False)
