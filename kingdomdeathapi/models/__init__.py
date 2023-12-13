@@ -1,6 +1,6 @@
 from .achieved_milestone import AchievedMilestone
 from .event import Event
-from .milestone import Milestone
+from .milestone_type import MilestoneType
 from .player import Player
 from .resource import Resource
 from .resource_type import ResourceType

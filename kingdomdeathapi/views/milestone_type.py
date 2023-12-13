@@ -2,10 +2,10 @@ from rest_framework import serializers
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
-from kingdomdeathapi.models import Milestone
+from kingdomdeathapi.models import MilestoneType
 
 
-class MilestoneView(ViewSet):
+class MilestoneTypeView(ViewSet):
 
     def list(self, request):
         """
@@ -18,7 +18,7 @@ class MilestoneView(ViewSet):
         Returns:
             Response: A serialized dictionary and HTTP status 200 OK.
         """
-        milestones = Milestone.objects.all()
+        milestones = MilestoneType.objects.all()
 
         serializer = MilestoneSerializer(milestones, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -27,5 +27,5 @@ class MilestoneView(ViewSet):
 class MilestoneSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Milestone
+        model = MilestoneType
         fields = ('id', 'type',)

@@ -1,27 +1,27 @@
 [
     {
-      "model": "kingdomdeathapi.milestone",
+      "model": "kingdomdeathapi.milestonetype",
       "pk": 1,
       "fields": {
         "type": "First Child Born"
       }
     },
     {
-      "model": "kingdomdeathapi.milestone",
+      "model": "kingdomdeathapi.milestonetype",
       "pk": 2,
       "fields": {
         "type": "First Death"
       }
     },
     {
-      "model": "kingdomdeathapi.milestone",
+      "model": "kingdomdeathapi.milestonetype",
       "pk": 3,
       "fields": {
         "type": "Population Reaches 15"
       }
     },
     {
-      "model": "kingdomdeathapi.milestone",
+      "model": "kingdomdeathapi.milestonetype",
       "pk": 4,
       "fields": {
         "type": "Innovations Reaches 5"

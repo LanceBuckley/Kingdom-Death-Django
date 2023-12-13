@@ -4,7 +4,7 @@
       "pk": 1,
       "fields": {
         "settlement": 2,
-        "milestone": 1,
+        "milestone_type": 1,
         "reached": true
       }
     },
@@ -13,7 +13,7 @@
       "pk": 2,
       "fields": {
         "settlement": 2,
-        "milestone": 3,
+        "milestone_type": 3,
         "reached": true
       }
     },
@@ -22,7 +22,7 @@
       "pk": 3,
       "fields": {
         "settlement": 2,
-        "milestone": 3,
+        "milestone_type": 3,
         "reached": true
       }
     },
@@ -31,7 +31,7 @@
       "pk": 4,
       "fields": {
         "settlement": 1,
-        "milestone": 1,
+        "milestone_type": 1,
         "reached": true
       }
     },
@@ -39,7 +39,7 @@
       "model": "kingdomdeathapi.achievedmilestone",
       "pk": 5,
       "fields": {
-        "milestone": 1,
+        "milestone_type": 1,
         "reached": true,
         "settlement": 8
       }
@@ -48,7 +48,7 @@
       "model": "kingdomdeathapi.achievedmilestone",
       "pk": 6,
       "fields": {
-        "milestone": 2,
+        "milestone_type": 2,
         "reached": true,
         "settlement": 8
       }
@@ -57,7 +57,7 @@
       "model": "kingdomdeathapi.achievedmilestone",
       "pk": 7,
       "fields": {
-        "milestone": 4,
+        "milestone_type": 4,
         "reached": true,
         "settlement": 8
       }
@@ -66,7 +66,7 @@
       "model": "kingdomdeathapi.achievedmilestone",
       "pk": 12,
       "fields": {
-        "milestone": 2,
+        "milestone_type": 2,
         "reached": true,
         "settlement": 1
       }
@@ -75,7 +75,7 @@
       "model": "kingdomdeathapi.achievedmilestone",
       "pk": 13,
       "fields": {
-        "milestone": 3,
+        "milestone_type": 3,
         "reached": true,
         "settlement": 1
       }
@@ -84,7 +84,7 @@
       "model": "kingdomdeathapi.achievedmilestone",
       "pk": 14,
       "fields": {
-        "milestone": 3,
+        "milestone_type": 3,
         "reached": true,
         "settlement": 8
       }
@@ -93,7 +93,7 @@
       "model": "kingdomdeathapi.achievedmilestone",
       "pk": 21,
       "fields": {
-        "milestone": 1,
+        "milestone_type": 1,
         "reached": true,
         "settlement": 11
       }
@@ -102,7 +102,7 @@
       "model": "kingdomdeathapi.achievedmilestone",
       "pk": 22,
       "fields": {
-        "milestone": 2,
+        "milestone_type": 2,
         "reached": true,
         "settlement": 11
       }
@@ -111,7 +111,7 @@
       "model": "kingdomdeathapi.achievedmilestone",
       "pk": 23,
       "fields": {
-        "milestone": 3,
+        "milestone_type": 3,
         "reached": true,
         "settlement": 11
       }
@@ -120,7 +120,7 @@
       "model": "kingdomdeathapi.achievedmilestone",
       "pk": 24,
       "fields": {
-        "milestone": 4,
+        "milestone_type": 4,
         "reached": true,
         "settlement": 11
       }

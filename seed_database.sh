@@ -12,7 +12,7 @@ python3 manage.py loaddata settlements
 python3 manage.py loaddata resource_types
 python3 manage.py loaddata resources
 python3 manage.py loaddata events
-python3 manage.py loaddata milestones
+python3 manage.py loaddata milestone_types
 python3 manage.py loaddata achieved_milestones
 python3 manage.py loaddata weapon_proficiencies
 python3 manage.py loaddata fighting_arts
