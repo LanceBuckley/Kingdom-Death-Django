@@ -20,13 +20,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
 from kingdomdeathapi.views import (
-    login_user, register_user, PlayerView, SettlementView, ResourceView, MilestoneTypeView)
+    login_user, register_user, PlayerView, SettlementView, ResourceView, MilestoneTypeView, MilestoneView)
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'players', PlayerView, 'player')
 router.register(r'settlements', SettlementView, 'settlement')
 router.register(r'resources', ResourceView, 'resource')
 router.register(r'milestone_types', MilestoneTypeView, 'milestone_types')
+router.register(r'milestone', MilestoneView, 'milestone')
 
 urlpatterns = [
     path('register', register_user),
