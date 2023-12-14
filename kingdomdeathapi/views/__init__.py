@@ -5,3 +5,4 @@ from .resource import ResourceView
 from .milestone_type import MilestoneTypeView
 from .milestone import MilestoneView
 from .ability import AbilityView
+from .event import EventView
