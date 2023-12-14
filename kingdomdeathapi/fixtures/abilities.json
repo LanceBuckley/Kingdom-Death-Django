@@ -1,0 +1,72 @@
+[
+    {
+      "model": "kingdomdeathapi.ability",
+      "pk": 1,
+      "fields": {
+        "name": "Acid Palms"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.ability",
+      "pk": 2,
+      "fields": {
+        "name": "Ageless"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.ability",
+      "pk": 3,
+      "fields": {
+        "name": "Analyze"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.ability",
+      "pk": 4,
+      "fields": {
+        "name": "Bitter Frenzy"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.ability",
+      "pk": 5,
+      "fields": {
+        "name": "Crystal Skin"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.ability",
+      "pk": 6,
+      "fields": {
+        "name": "Heart of the Sword"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.ability",
+      "pk": 7,
+      "fields": {
+        "name": "Leyline Walker"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.ability",
+      "pk": 8,
+      "fields": {
+        "name": "Matchmaker"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.ability",
+      "pk": 9,
+      "fields": {
+        "name": "Oracle's Eye"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.ability",
+      "pk": 10,
+      "fields": {
+        "name": "Possessed"
+      }
+    }
+  ]
