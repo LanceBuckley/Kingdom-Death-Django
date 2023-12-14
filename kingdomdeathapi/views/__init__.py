@@ -7,3 +7,4 @@ from .milestone import MilestoneView
 from .ability import AbilityView
 from .disorder import DisorderView
 from .event import EventView
+from .fighting_art import FightingArtView
