@@ -26,19 +26,19 @@ class EventView(ViewSet):
     def retrieve(self, request, pk=None):
         """
         Summary:
-            Retrieve a specific ability by primary key.
+            Retrieve a specific event by primary key.
 
         Args:
             request (HttpRequest): The full HTTP request object.
-            pk (int): The primary key of the ability to retrieve.
+            pk (int): The primary key of the event to retrieve.
 
         Returns:
-            Response: A serialized dictionary containing the ability's data and HTTP status 200 OK,
-            or HTTP status 404 Not Found if the ability with the specified primary key does not exist.
+            Response: A serialized dictionary containing the event's data and HTTP status 200 OK,
+            or HTTP status 404 Not Found if the event with the specified primary key does not exist.
         """
         try:
-            ability = Event.objects.get(pk=pk)
-            serializer = EventSerializer(ability, many=False)
+            event = Event.objects.get(pk=pk)
+            serializer = EventSerializer(event, many=False)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Event.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -50,35 +50,35 @@ class EventView(ViewSet):
 
         Args:
             request (HttpRequest): The full HTTP request object.
-            pk (int): The primary key of the ability to retrieve.
+            pk (int): The primary key of the event to retrieve.
 
         Returns:
-            Response: A serialized dictionary containing the ability's data and HTTP status 201 Created.
+            Response: A serialized dictionary containing the event's data and HTTP status 201 Created.
         """
 
-        ability = Event.objects.create(
+        event = Event.objects.create(
             name=request.data["name"]
         )
 
-        serializer = EventSerializer(ability, many=False)
+        serializer = EventSerializer(event, many=False)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def update(self, request, pk=None):
         """
         Summary:
-            Update a specific ability's user information by primary key.
+            Update a specific event's user information by primary key.
 
         Args:
             request (HttpRequest): The full HTTP request object.
-            pk (int): The primary key of the ability to update.
+            pk (int): The primary key of the event to update.
 
         Returns:
-            Response: A successful HTTP status 204 No Content response after updating the ability's user details,
-            or HTTP status 404 Not Found if the ability with the specified primary key does not exist.
+            Response: A successful HTTP status 204 No Content response after updating the event's user details,
+            or HTTP status 404 Not Found if the event with the specified primary key does not exist.
         """
         try:
-            ability = Event.objects.get(pk=pk)
-            ability.name = request.data["name"]
+            event = Event.objects.get(pk=pk)
+            event.name = request.data["name"]
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Event.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -86,20 +86,20 @@ class EventView(ViewSet):
     def destroy(self, request, pk=None):
         """
         Summary:
-            Delete a specific ability and associated user by primary key.
+            Delete a specific event and associated user by primary key.
 
         Args:
             request (HttpRequest): The full HTTP request object.
-            pk (int): The primary key of the ability to delete.
+            pk (int): The primary key of the event to delete.
 
         Returns:
             Response: A successful HTTP status 204 No Content response after deletion,
-            or HTTP status 404 Not Found if the ability with the specified primary key does not exist.
+            or HTTP status 404 Not Found if the event with the specified primary key does not exist.
         """
 
         try:
-            ability = Event.objects.get(pk=pk)
-            ability.delete()
+            event = Event.objects.get(pk=pk)
+            event.delete()
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Event.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
