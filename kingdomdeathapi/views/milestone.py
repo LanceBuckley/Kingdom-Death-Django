@@ -122,7 +122,7 @@ class SettlementSerializer(serializers.ModelSerializer):
 class MilestoneTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = MilestoneType
-        fields = ('id', )
+        fields = ('id', 'type', )
 
 class MilestoneSerializer(serializers.ModelSerializer):
 
