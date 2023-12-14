@@ -2,7 +2,7 @@ from rest_framework import serializers
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
-from kingdomdeathapi.models import Milestone, Settlement
+from kingdomdeathapi.models import Milestone, Settlement, MilestoneType
 
 
 class MilestoneView(ViewSet):
@@ -56,10 +56,11 @@ class MilestoneView(ViewSet):
             Response: A serialized dictionary containing the milestone's data and HTTP status 201 Created.
         """
         settlement = Settlement.objects.get(pk=request.data["settlement"])
+        milestone_type = MilestoneType.objects.get(pk=request.data["milestone_type"])
 
         milestone = Milestone.objects.create(
             settlement=settlement,
-            milestone_type=request.data["milestone_type"],
+            milestone_type=milestone_type,
             achieved=request.data["achieved"],
         )
 
@@ -81,8 +82,9 @@ class MilestoneView(ViewSet):
         """
         try:
             milestone = Milestone.objects.get(pk=pk)
-            milestone.milestone_type = request.data["milestone_type"]
             milestone.achieved = request.data["achieved"]
+            milestone.milestone_type = MilestoneType.objects.get(
+                pk=request.data["milestone_type"])
             milestone.settlement = Settlement.objects.get(
                 pk=request.data["settlement"])
             milestone.save()
@@ -117,9 +119,15 @@ class SettlementSerializer(serializers.ModelSerializer):
         model = Settlement
         fields = ('id', )
 
+class MilestoneTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MilestoneType
+        fields = ('id', )
+
 class MilestoneSerializer(serializers.ModelSerializer):
 
     settlement = SettlementSerializer(many=False)
+    milestone_type = MilestoneTypeSerializer(many=False)
 
     class Meta:
         model = Milestone

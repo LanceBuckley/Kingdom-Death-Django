@@ -26,8 +26,8 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'players', PlayerView, 'player')
 router.register(r'settlements', SettlementView, 'settlement')
 router.register(r'resources', ResourceView, 'resource')
-router.register(r'milestone_types', MilestoneTypeView, 'milestone_types')
-router.register(r'milestone', MilestoneView, 'milestone')
+router.register(r'milestone_types', MilestoneTypeView, 'milestone_type')
+router.register(r'milestones', MilestoneView, 'milestone')
 
 urlpatterns = [
     path('register', register_user),
