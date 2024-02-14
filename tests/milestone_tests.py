@@ -1,8 +1,7 @@
 import json
 from rest_framework import status
 from rest_framework.test import APITestCase
-from django.contrib.auth.models import User
-from kingdomdeathapi.models import Player, Settlement, Milestone, MilestoneType
+from kingdomdeathapi.models import Player, Milestone
 from rest_framework.authtoken.models import Token
 
 
