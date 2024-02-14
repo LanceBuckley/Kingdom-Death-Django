@@ -47,7 +47,7 @@ class MilestoneTests(APITestCase):
         # Assert that the properties on the created resource are correct
         self.assertEqual(
             json_response["settlement"], {'id': 1})
-        self.assertEqual(json_response["milestone_type"], {'id': 4})
+        self.assertEqual(json_response["milestone_type"], {'id': 4, 'type': 'Innovations Reaches 5'})
         self.assertEqual(json_response["achieved"], True)
 
     def test_get_milestone(self):
@@ -67,7 +67,7 @@ class MilestoneTests(APITestCase):
         # Assert that the values are correct
         self.assertEqual(
             json_response["settlement"], {'id': 2})
-        self.assertEqual(json_response["milestone_type"], {'id': 1})
+        self.assertEqual(json_response["milestone_type"], {'id': 1, 'type': 'First Child Born'})
         self.assertEqual(json_response["achieved"], True)
 
     def test_change_milestone(self):
@@ -94,7 +94,7 @@ class MilestoneTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
             json_response["settlement"], {'id': 1})
-        self.assertEqual(json_response["milestone_type"], {'id': 4})
+        self.assertEqual(json_response["milestone_type"], {'id': 4, 'type': 'Innovations Reaches 5'})
         self.assertEqual(json_response["achieved"], False)
 
     def test_delete_milestone(self):
