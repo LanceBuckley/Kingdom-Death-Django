@@ -56,10 +56,12 @@ class SurvivorView(ViewSet):
             Response: A serialized dictionary containing the survivor's data and HTTP status 201 Created.
         """
         user = Player.objects.get(pk=request.data["user"])
-        weapon_proficiency = WeaponProficiency.objects.get(pk=request.data["weapon_proficiency"])
-        fighting_art = FightingArt.objects.get(pk=request.data["fighting_art"])
-        disorder = Disorder.objects.get(pk=request.data["disorder"])
-        ability = Ability.objects.get(pk=request.data["ability"])
+        
+        # Get the many-to-many relationship instances
+        weapon_proficiencies = WeaponProficiency.objects.filter(pk__in=request.data["weapon_proficiency"])
+        fighting_arts = FightingArt.objects.filter(pk__in=request.data["fighting_art"])
+        disorders = Disorder.objects.filter(pk__in=request.data["disorder"])
+        abilities = Ability.objects.filter(pk__in=request.data["ability"])
 
 
         survivor = Survivor.objects.create(
@@ -91,11 +93,13 @@ class SurvivorView(ViewSet):
             leg_light_wound=request.data["leg_light_wound"],
             leg_heavy_wound=request.data["leg_heavy_wound"],
             user=user,
-            weapon_proficiency = weapon_proficiency,
-            fighting_art = fighting_art,
-            disorder = disorder,
-            ability = ability
         )
+
+        # Set the many-to-many relationships
+        survivor.weapon_proficiency.set(weapon_proficiencies)
+        survivor.fighting_art.set(fighting_arts)
+        survivor.disorder.set(disorders)
+        survivor.ability.set(abilities)
 
         serializer = SurvivorSerializer(survivor, many=False)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
