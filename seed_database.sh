@@ -18,3 +18,4 @@ python3 manage.py loaddata weapon_proficiencies
 python3 manage.py loaddata fighting_arts
 python3 manage.py loaddata disorders
 python3 manage.py loaddata abilities
+python3 manage.py loaddata survivors

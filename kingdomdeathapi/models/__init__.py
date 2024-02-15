@@ -9,3 +9,4 @@ from .weapon_proficiency import WeaponProficiency
 from .fighting_art import FightingArt
 from .disorder import Disorder
 from .ability import Ability
+from .survivor import Survivor
