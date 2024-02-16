@@ -33,7 +33,7 @@ def login_user(request):
             'valid': True,
             'token': token.key,
             'staff': authenticated_user.is_staff,
-            'game_master': player.game_master
+            'is_game_master': player.is_game_master
         }
         return Response(data)
     else:
@@ -58,7 +58,7 @@ def register_user(request):
     password = request.data.get('password', None)
     company_name = request.data.get('company_name', None)
     phone_number = request.data.get('phone_number', None)
-    game_master = request.data.get('game_master', None)
+    is_game_master = request.data.get('is_game_master', None)
 
     if account_type is not None \
             and email is not None\
@@ -68,7 +68,7 @@ def register_user(request):
             and password is not None \
             and company_name is not None \
             and phone_number is not None \
-            and game_master is not None :
+            and is_game_master is not None :
 
         try:
             # Create a new user by invoking the `create_user` helper method
@@ -91,13 +91,13 @@ def register_user(request):
         if account_type == 'player':
             account = Player.objects.create(
                 user=new_user,
-                game_master=request.data['game_master']
+                is_game_master=request.data['is_game_master']
             )
 
         # Use the REST Framework's token generator on the new user account
         token = Token.objects.create(user=account.user)
         # Return the token to the client
-        data = {'token': token.key, 'staff': new_user.is_staff, 'game_master': account.game_master, 'valid': True}
+        data = {'token': token.key, 'staff': new_user.is_staff, 'is_game_master': account.is_game_master, 'valid': True}
         return Response(data)
 
     return Response({'message': 'You must provide email, password, first_name, last_name, and username'}, status=status.HTTP_400_BAD_REQUEST)
