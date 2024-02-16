@@ -10,3 +10,5 @@ from .event import EventView
 from .fighting_art import FightingArtView
 from .weapon_proficiency import WeaponProficiencyView
 from .survivor import SurvivorView
+from .settlement_inventory import SettlementInventoryView
+from .settlement_event import SettlementEventView

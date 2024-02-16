@@ -10,3 +10,5 @@ from .fighting_art import FightingArt
 from .disorder import Disorder
 from .ability import Ability
 from .survivor import Survivor
+from .settlement_inventory import SettlementInventory
+from .settlement_event import SettlementEvent

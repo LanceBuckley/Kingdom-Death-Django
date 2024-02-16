@@ -1,0 +1,110 @@
+[
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 1,
+      "fields": {
+        "settlement": 2,
+        "event": 1,
+        "year": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 4,
+      "fields": {
+        "settlement": 8,
+        "event": 7,
+        "year": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 5,
+      "fields": {
+        "settlement": 8,
+        "event": 6,
+        "year": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 6,
+      "fields": {
+        "settlement": 8,
+        "event": 1,
+        "year": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 13,
+      "fields": {
+        "settlement": 1,
+        "event": 7,
+        "year": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 14,
+      "fields": {
+        "settlement": 1,
+        "event": 8,
+        "year": 10
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 15,
+      "fields": {
+        "settlement": 8,
+        "event": 1,
+        "year": 5
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 16,
+      "fields": {
+        "settlement": 8,
+        "event": 6,
+        "year": 10
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 28,
+      "fields": {
+        "settlement": 11,
+        "event": 1,
+        "year": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 29,
+      "fields": {
+        "settlement": 11,
+        "event": 1,
+        "year": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 30,
+      "fields": {
+        "settlement": 11,
+        "event": 1,
+        "year": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.settlementevent",
+      "pk": 31,
+      "fields": {
+        "settlement": 11,
+        "event": 1,
+        "year": 4
+      }
+    }
+  ]
