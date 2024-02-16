@@ -4,7 +4,7 @@
       "pk": 1,
       "fields": {
         "user": 1,
-        "game_master": true
+        "is_game_master": true
       }
     },
     {
@@ -12,7 +12,7 @@
       "pk": 2,
       "fields": {
         "user": 2,
-        "game_master": true
+        "is_game_master": true
       }
     },
     {
@@ -20,7 +20,7 @@
       "pk": 3,
       "fields": {
         "user": 3,
-        "game_master": true
+        "is_game_master": true
       }
     },
     {
@@ -28,7 +28,7 @@
       "pk": 4,
       "fields": {
         "user": 4,
-        "game_master": false
+        "is_game_master": false
       }
     },
     {
@@ -36,7 +36,7 @@
       "pk": 5,
       "fields": {
         "user": 5,
-        "game_master": false
+        "is_game_master": false
       }
     },
     {
@@ -44,7 +44,7 @@
       "pk": 6,
       "fields": {
         "user": 6,
-        "game_master": false
+        "is_game_master": false
       }
     }
   ]

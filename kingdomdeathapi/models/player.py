@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Player(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    game_master = models.BooleanField(default=False)
+    is_game_master = models.BooleanField(default=False)
 
     @property
     def full_name(self):

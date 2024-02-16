@@ -21,3 +21,4 @@ python3 manage.py loaddata abilities
 python3 manage.py loaddata survivors
 python3 manage.py loaddata settlement_inventories
 python3 manage.py loaddata settlement_events
+python3 manage.py loaddata sessions

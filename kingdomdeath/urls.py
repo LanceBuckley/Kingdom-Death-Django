@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
 from kingdomdeathapi.views import (
-    login_user, register_user, PlayerView, SettlementView, ResourceView, MilestoneTypeView, MilestoneView, AbilityView, DisorderView, EventView, FightingArtView, WeaponProficiencyView, SurvivorView, SettlementInventoryView, SettlementEventView)
+    login_user, register_user, PlayerView, SettlementView, ResourceView, MilestoneTypeView, MilestoneView, AbilityView, DisorderView, EventView, FightingArtView, WeaponProficiencyView, SurvivorView, SettlementInventoryView, SettlementEventView, SessionView)
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'players', PlayerView, 'player')
@@ -36,6 +36,7 @@ router.register(r'weapon_proficiencies', WeaponProficiencyView, 'weapon_proficie
 router.register(r'survivors', SurvivorView, 'survivor')
 router.register(r'settlement_inventories', SettlementInventoryView, 'settlement_inventory')
 router.register(r'settlement_events', SettlementEventView, 'settlement_event')
+router.register(r'sessions', SessionView, 'session')
 
 urlpatterns = [
     path('register', register_user),

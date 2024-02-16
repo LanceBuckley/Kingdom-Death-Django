@@ -12,3 +12,4 @@ from .weapon_proficiency import WeaponProficiencyView
 from .survivor import SurvivorView
 from .settlement_inventory import SettlementInventoryView
 from .settlement_event import SettlementEventView
+from .session import SessionView

@@ -33,7 +33,7 @@ class PlayerTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
         # Assert that the values are correct
-        self.assertEqual(json_response["game_master"], True)
+        self.assertEqual(json_response["is_game_master"], True)
 
     def test_change_player(self):
         """
@@ -46,7 +46,7 @@ class PlayerTests(APITestCase):
             "last_name": "Myers",
             "username": "danielmyers",
             "email": "daniel@myers.com",
-            "game_master": False
+            "is_game_master": False
         }
 
         response = self.client.put(
@@ -64,7 +64,7 @@ class PlayerTests(APITestCase):
         self.assertEqual(json_response["last_name"], "Myers")
         self.assertEqual(json_response["username"], "danielmyers")
         self.assertEqual(json_response["email"], "daniel@myers.com")
-        self.assertEqual(json_response["game_master"], False)
+        self.assertEqual(json_response["is_game_master"], False)
 
     def test_delete_player(self):
         """
@@ -77,7 +77,7 @@ class PlayerTests(APITestCase):
 
         # Seed the database with a player
         player = Player.objects.create(
-            user=user, game_master=True)
+            user=user, is_game_master=True)
 
         # DELETE the player you just created
         response = self.client.delete(f"/players/{player.id}")

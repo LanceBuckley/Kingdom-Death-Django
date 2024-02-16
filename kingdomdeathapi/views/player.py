@@ -20,11 +20,11 @@ class PlayerView(ViewSet):
         """
         players = Player.objects.all()
 
-        if request.query_params.get('game_master') is not None:
-            if request.query_params.get('game_master') == 'true':
-                players = players.filter(game_master=True)
-            elif request.query_params.get('game_master') == 'false':
-                players = players.filter(game_master=False)
+        if request.query_params.get('is_game_master') is not None:
+            if request.query_params.get('is_game_master') == 'true':
+                players = players.filter(is_game_master=True)
+            elif request.query_params.get('is_game_master') == 'false':
+                players = players.filter(is_game_master=False)
 
         if "current" in request.query_params:
             players = players.filter(user=request.auth.user)
@@ -72,7 +72,7 @@ class PlayerView(ViewSet):
             player.user.username = request.data["username"]
             player.user.email = request.data["email"]
             player.user.save()
-            player.game_master = request.data["game_master"]
+            player.is_game_master = request.data["is_game_master"]
             player.save()
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Player.DoesNotExist:
@@ -106,4 +106,4 @@ class PlayerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Player
-        fields = ('id', 'first_name', 'last_name', 'username', 'email', 'game_master', 'full_name')
+        fields = ('id', 'first_name', 'last_name', 'username', 'email', 'is_game_master', 'full_name')

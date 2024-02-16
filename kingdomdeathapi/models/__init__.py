@@ -12,3 +12,4 @@ from .ability import Ability
 from .survivor import Survivor
 from .settlement_inventory import SettlementInventory
 from .settlement_event import SettlementEvent
+from .session import Session
