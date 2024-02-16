@@ -62,7 +62,7 @@ class SurvivorTests(APITestCase):
         "fighting_art": [1, 3, 9],
         "disorder": [1, 4, 10],
         "ability": [4, 5, 9]
-    }
+        }
 
         # Initiate request and store response
         response = self.client.post(url, data, format='json')
@@ -137,23 +137,93 @@ class SurvivorTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
         # Assert that the values are correct
-        self.assertEqual(json_response["name"], "Yharnam")
-        self.assertEqual(json_response["survival_limit"], 4)
-        self.assertEqual(json_response["population"], 3)
+        self.assertEqual(json_response["id"], 1)
+        self.assertEqual(json_response["name"], "Tester")
+        self.assertEqual(json_response["survival"], 3)
+        self.assertEqual(json_response["insanity"], 8)
+        self.assertEqual(json_response["hunt_experience"], 2)
+        self.assertEqual(json_response["gender"], "male")
+        self.assertEqual(json_response["movement"], 1)
+        self.assertEqual(json_response["accuracy"], 0)
+        self.assertEqual(json_response["strength"], 0)
+        self.assertEqual(json_response["evasion"], 0)
+        self.assertEqual(json_response["speed"], 1)
+        self.assertEqual(json_response["luck"], 1)
+        self.assertEqual(json_response["understanding"], 1)
+        self.assertEqual(json_response["courage"], 2)
+        self.assertEqual(json_response["head_armor"], 2)
+        self.assertEqual(json_response["head_wound"], False)
+        self.assertEqual(json_response["arm_armor"], 2)
+        self.assertEqual(json_response["arm_light_wound"], False)
+        self.assertEqual(json_response["arm_heavy_wound"], False)
+        self.assertEqual(json_response["body_armor"], 2)
+        self.assertEqual(json_response["body_light_wound"], False)
+        self.assertEqual(json_response["body_heavy_wound"], False)
+        self.assertEqual(json_response["waist_armor"], 2)
+        self.assertEqual(json_response["waist_light_wound"], False)
+        self.assertEqual(json_response["waist_heavy_wound"], False)
+        self.assertEqual(json_response["leg_armor"], 2)
+        self.assertEqual(json_response["leg_light_wound"], False)
+        self.assertEqual(json_response["leg_heavy_wound"], False)
         self.assertEqual(
-            json_response["game_master"], {'id': 1, 'username': 'Twiknight'})
+            json_response["user"], {'id': 1, 'username': 'Twiknight'})
+        self.assertEqual(
+            json_response["weapon_proficiency"], [{'id': 8, 'name': 'Shield'}])
+        self.assertEqual(
+            json_response["fighting_art"],
+            [{ "id": 1, "name": "Ambidextrous"},
+            { "id": 3, "name": "Clutch Fighter"},
+            { "id": 9, "name": "Last Man Standing"}])
+        self.assertEqual(
+            json_response["disorder"],
+            [{ "id": 1, "name": "Aichmophobia"},
+            { "id": 4, "name": "Binge Eating"},
+            {"id": 10, "name": "Traumatized"}])
+        self.assertEqual(
+            json_response["ability"],
+            [{ "id": 4, "name": "Bitter Frenzy"},
+            { "id": 5, "name": "Crystal Skin"},
+            { "id": 9, "name": "Oracle's Eye"}])
 
     def test_change_survivor(self):
         """
         Ensure we can change an existing survivor.
         """
 
-        # DEFINE NEW PROPERTIES FOR GAME
+        # DEFINE NEW PROPERTIES FOR SURVIVOR
         data = {
-            "name": "New",
-            "survival_limit": 4,
-            "population": 10,
-            "game_master": self.player.id
+        "user": 1,
+        "name": "Test",
+        "survival": 5,
+        "insanity": 12,
+        "hunt_experience": 5,
+        "gender": "Male",
+        "movement": 1,
+        "accuracy": 2,
+        "strength": 2,
+        "evasion": 2,
+        "speed": 2,
+        "luck": 2,
+        "understanding": 4,
+        "courage": 6,
+        "head_armor": 2,
+        "head_wound": False,
+        "arm_armor": 2,
+        "arm_light_wound": True,
+        "arm_heavy_wound": True,
+        "body_armor": 2,
+        "body_light_wound": True,
+        "body_heavy_wound": True,
+        "waist_armor": 2,
+        "waist_light_wound": True,
+        "waist_heavy_wound": True,
+        "leg_armor": 2,
+        "leg_light_wound": False,
+        "leg_heavy_wound": False,
+        "weapon_proficiency": [8],
+        "fighting_art": [1, 3, 9],
+        "disorder": [1, 4, 10],
+        "ability": [4, 5, 9]
         }
 
         response = self.client.put(
@@ -165,11 +235,52 @@ class SurvivorTests(APITestCase):
         json_response = json.loads(response.content)
 
         # Assert that the properties are correct
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(json_response["name"], "New")
-        self.assertEqual(json_response["survival_limit"], 4)
-        self.assertEqual(json_response["population"], 10)
-        self.assertEqual(json_response["game_master"], {'id': 1, 'username': 'Twiknight'})
+        self.assertEqual(json_response["name"], "Test")
+        self.assertEqual(json_response["survival"], 5)
+        self.assertEqual(json_response["insanity"], 12)
+        self.assertEqual(json_response["hunt_experience"], 5)
+        self.assertEqual(json_response["gender"], "Male")
+        self.assertEqual(json_response["movement"], 1)
+        self.assertEqual(json_response["accuracy"], 2)
+        self.assertEqual(json_response["strength"], 2)
+        self.assertEqual(json_response["evasion"], 2)
+        self.assertEqual(json_response["speed"], 2)
+        self.assertEqual(json_response["luck"], 2)
+        self.assertEqual(json_response["understanding"], 4)
+        self.assertEqual(json_response["courage"], 6)
+        self.assertEqual(json_response["head_armor"], 2)
+        self.assertEqual(json_response["head_wound"], False)
+        self.assertEqual(json_response["arm_armor"], 2)
+        self.assertEqual(json_response["arm_light_wound"], True)
+        self.assertEqual(json_response["arm_heavy_wound"], True)
+        self.assertEqual(json_response["body_armor"], 2)
+        self.assertEqual(json_response["body_light_wound"], True)
+        self.assertEqual(json_response["body_heavy_wound"], True)
+        self.assertEqual(json_response["waist_armor"], 2)
+        self.assertEqual(json_response["waist_light_wound"], True)
+        self.assertEqual(json_response["waist_heavy_wound"], True)
+        self.assertEqual(json_response["leg_armor"], 2)
+        self.assertEqual(json_response["leg_light_wound"], False)
+        self.assertEqual(json_response["leg_heavy_wound"], False)
+        self.assertEqual(
+            json_response["user"], {'id': 1, 'username': 'Twiknight'})
+        self.assertEqual(
+            json_response["weapon_proficiency"], [{'id': 8, 'name': 'Shield'}])
+        self.assertEqual(
+            json_response["fighting_art"],
+            [{ "id": 1, "name": "Ambidextrous"},
+            { "id": 3, "name": "Clutch Fighter"},
+            { "id": 9, "name": "Last Man Standing"}])
+        self.assertEqual(
+            json_response["disorder"],
+            [{ "id": 1, "name": "Aichmophobia"},
+            { "id": 4, "name": "Binge Eating"},
+            {"id": 10, "name": "Traumatized"}])
+        self.assertEqual(
+            json_response["ability"],
+            [{ "id": 4, "name": "Bitter Frenzy"},
+            { "id": 5, "name": "Crystal Skin"},
+            { "id": 9, "name": "Oracle's Eye"}])
 
     def test_delete_survivor(self):
         """

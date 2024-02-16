@@ -119,43 +119,48 @@ class SurvivorView(ViewSet):
         """
         try:
             survivor = Survivor.objects.get(pk=pk)
-            survivor.name=request.data["name"],
-            survivor.survival=request.data["survival"],
-            survivor.insanity=request.data["insanity"],
-            survivor.hunt_experience=request.data["hunt_experience"],
-            survivor.gender=request.data["gender"],
-            survivor.movement=request.data["movement"],
-            survivor.accuracy=request.data["accuracy"],
-            survivor.strength=request.data["strength"],
-            survivor.evasion=request.data["evasion"],
-            survivor.speed=request.data["speed"],
-            survivor.luck=request.data["luck"],
-            survivor.understanding=request.data["understanding"],
-            survivor.courage=request.data["courage"],
-            survivor.head_armor=request.data["head_armor"],
-            survivor.head_wound=request.data["head_wound"],
-            survivor.arm_armor=request.data["arm_armor"],
-            survivor.arm_light_wound=request.data["arm_light_wound"],
-            survivor.arm_heavy_wound=request.data["arm_heavy_wound"],
-            survivor.body_armor=request.data["body_armor"],
-            survivor.body_light_wound=request.data["body_light_wound"],
-            survivor.body_heavy_wound=request.data["body_heavy_wound"],
-            survivor.waist_armor=request.data["waist_armor"],
-            survivor.waist_light_wound=request.data["waist_light_wound"],
-            survivor.waist_heavy_wound=request.data["waist_heavy_wound"],
-            survivor.leg_armor=request.data["leg_armor"],
-            survivor.leg_light_wound=request.data["leg_light_wound"],
-            survivor.leg_heavy_wound=request.data["leg_heavy_wound"],
+            # Get the many-to-many relationship instances
+            weapon_proficiencies = WeaponProficiency.objects.filter(pk__in=request.data["weapon_proficiency"])
+            fighting_arts = FightingArt.objects.filter(pk__in=request.data["fighting_art"])
+            disorders = Disorder.objects.filter(pk__in=request.data["disorder"])
+            abilities = Ability.objects.filter(pk__in=request.data["ability"])
+
+            survivor.name=request.data["name"]
+            survivor.survival=request.data["survival"]
+            survivor.insanity=request.data["insanity"]
+            survivor.hunt_experience=request.data["hunt_experience"]
+            survivor.gender=request.data["gender"]
+            survivor.movement=request.data["movement"]
+            survivor.accuracy=request.data["accuracy"]
+            survivor.strength=request.data["strength"]
+            survivor.evasion=request.data["evasion"]
+            survivor.speed=request.data["speed"]
+            survivor.luck=request.data["luck"]
+            survivor.understanding=request.data["understanding"]
+            survivor.courage=request.data["courage"]
+            survivor.head_armor=request.data["head_armor"]
+            survivor.head_wound=request.data["head_wound"]
+            survivor.arm_armor=request.data["arm_armor"]
+            survivor.arm_light_wound=request.data["arm_light_wound"]
+            survivor.arm_heavy_wound=request.data["arm_heavy_wound"]
+            survivor.body_armor=request.data["body_armor"]
+            survivor.body_light_wound=request.data["body_light_wound"]
+            survivor.body_heavy_wound=request.data["body_heavy_wound"]
+            survivor.waist_armor=request.data["waist_armor"]
+            survivor.waist_light_wound=request.data["waist_light_wound"]
+            survivor.waist_heavy_wound=request.data["waist_heavy_wound"]
+            survivor.leg_armor=request.data["leg_armor"]
+            survivor.leg_light_wound=request.data["leg_light_wound"]
+            survivor.leg_heavy_wound=request.data["leg_heavy_wound"]
             survivor.user = Player.objects.get(
                 pk=request.data["user"])
-            survivor.weapon_proficiency = WeaponProficiency.objects.get(
-                pk=request.data["weapon_proficiency"])
-            survivor.fighting_art = FightingArt.objects.get(
-                pk=request.data["fighting_art"])
-            survivor.disorder = Disorder.objects.get(
-                pk=request.data["disorder"])
-            survivor.ability = Ability.objects.get(
-                pk=request.data["ability"])
+            
+            # Set the many-to-many relationships
+            survivor.weapon_proficiency.set(weapon_proficiencies)
+            survivor.fighting_art.set(fighting_arts)
+            survivor.disorder.set(disorders)
+            survivor.ability.set(abilities)
+
             survivor.save()
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Survivor.DoesNotExist:
