@@ -20,6 +20,15 @@ class MilestoneView(ViewSet):
         """
         milestones = Milestone.objects.all()
 
+        if "achieved" in request.query_params:
+            achieved_value = request.query_params.get('achieved')
+            milestones = milestones.filter(achieved=achieved_value)
+
+        if "settlement" in request.query_params:
+            settlement_value = request.query_params.get('settlement')
+            milestones = milestones.filter(settlement=settlement_value)
+
+
         serializer = MilestoneSerializer(milestones, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -114,11 +123,6 @@ class MilestoneView(ViewSet):
             return Response(status=status.HTTP_404_NOT_FOUND)
 
 
-class SettlementSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Settlement
-        fields = ('id', )
-
 class MilestoneTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = MilestoneType
@@ -126,7 +130,6 @@ class MilestoneTypeSerializer(serializers.ModelSerializer):
 
 class MilestoneSerializer(serializers.ModelSerializer):
 
-    settlement = SettlementSerializer(many=False)
     milestone_type = MilestoneTypeSerializer(many=False)
 
     class Meta:

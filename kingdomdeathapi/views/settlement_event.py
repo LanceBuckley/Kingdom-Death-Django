@@ -20,6 +20,11 @@ class SettlementEventView(ViewSet):
         """
         settlement_events = SettlementEvent.objects.all()
 
+        if "settlement" in request.query_params:
+            settlement_value = request.query_params.get('settlement')
+            settlement_events = settlement_events.filter(settlement=settlement_value)
+
+
         serializer = SettlementEventSerializer(settlement_events, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 

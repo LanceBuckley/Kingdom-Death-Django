@@ -20,6 +20,10 @@ class SettlementInventoryView(ViewSet):
         """
         settlement_inventories = SettlementInventory.objects.all()
 
+        if "settlement" in request.query_params:
+            settlement_value = request.query_params.get('settlement')
+            settlement_inventories = settlement_inventories.filter(settlement=settlement_value)
+
         serializer = SettlementInventorySerializer(settlement_inventories, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
