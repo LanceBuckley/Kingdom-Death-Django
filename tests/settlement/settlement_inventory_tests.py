@@ -76,7 +76,7 @@ class SettlementInventoryTests(APITestCase):
         # DEFINE NEW PROPERTIES FOR GAME
         data = {
             "settlement": 1,
-            "resource": 2,
+            "resource": {'id': 2, 'name': "Bone", 'type': {'id': 2, 'name': "Bone"}},
             "amount": 2,
         }
 

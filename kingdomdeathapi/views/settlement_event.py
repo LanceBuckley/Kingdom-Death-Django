@@ -89,7 +89,7 @@ class SettlementEventView(ViewSet):
             settlement_event = SettlementEvent.objects.get(pk=pk)
             settlement_event.year = request.data["year"]
             settlement_event.event = Event.objects.get(
-                pk=request.data["event"])
+                pk=request.data["event"]["id"])
             settlement_event.settlement = Settlement.objects.get(
                 pk=request.data["settlement"])
             settlement_event.save()

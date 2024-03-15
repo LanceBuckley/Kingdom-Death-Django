@@ -88,7 +88,7 @@ class SettlementInventoryView(ViewSet):
             settlement_inventory = SettlementInventory.objects.get(pk=pk)
             settlement_inventory.amount = request.data["amount"]
             settlement_inventory.resource = Resource.objects.get(
-                pk=request.data["resource"])
+                pk=request.data["resource"]["id"])
             settlement_inventory.settlement = Settlement.objects.get(
                 pk=request.data["settlement"])
             settlement_inventory.save()

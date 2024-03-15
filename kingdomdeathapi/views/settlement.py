@@ -86,9 +86,9 @@ class SettlementView(ViewSet):
             settlement.survival_limit = request.data["survival_limit"]
             settlement.population = request.data["population"]
             settlement.game_master = Player.objects.get(
-                pk=request.data["game_master"])
+                pk=request.data["game_master"]["id"])
             settlement.save()
-            return Response(None, status=status.HTTP_204_NO_CONTENT)
+            return Response(status=status.HTTP_204_NO_CONTENT)
         except Settlement.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 

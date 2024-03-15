@@ -83,7 +83,7 @@ class SettlementTests(APITestCase):
             "name": "New",
             "survival_limit": 4,
             "population": 10,
-            "game_master": self.player.id
+            "game_master": {'id': 1, 'username': 'Twiknight'}
         }
 
         response = self.client.put(

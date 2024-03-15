@@ -76,7 +76,7 @@ class SettlementEventTests(APITestCase):
         # DEFINE NEW PROPERTIES FOR GAME
         data = {
             "settlement": 1,
-            "event": 1,
+            "event": {'id': 1, 'name': "Acid Storm"},
             "year": 3,
         }
 
