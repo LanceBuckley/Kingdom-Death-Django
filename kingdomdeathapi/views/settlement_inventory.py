@@ -60,7 +60,7 @@ class SettlementInventoryView(ViewSet):
             Response: A serialized dictionary containing the settlement_inventory's data and HTTP status 201 Created.
         """
         settlement = Settlement.objects.get(pk=request.data["settlement"])
-        resource = Resource.objects.get(pk=request.data["resource"])
+        resource = Resource.objects.get(pk=request.data["resource"]["id"])
 
         settlement_inventory = SettlementInventory.objects.create(
             settlement=settlement,

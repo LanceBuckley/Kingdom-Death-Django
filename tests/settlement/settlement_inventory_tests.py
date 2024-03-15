@@ -31,7 +31,7 @@ class SettlementInventoryTests(APITestCase):
         # Define the request body
         data = {
             "settlement": 1,
-            "resource": 2,
+            "resource": {'id': 2, 'name': "Bone", 'type': {'id': 2, 'name': "Bone"}},
             "amount": 5,
         }
 
