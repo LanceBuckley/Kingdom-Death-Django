@@ -75,5 +75,12 @@
         "fields": {
           "name": "Sunstalker"
         }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 12,
+        "fields": {
+          "name": "Gambler's Chest"
+        }
     }
 ]

@@ -3,70 +3,497 @@
       "model": "kingdomdeathapi.disorder",
       "pk": 1,
       "fields": {
-        "name": "Aichmophobia"
+        "name": "Aichmophobia",
+        "flavor_text": "Sharp things make you uncomfortable. It's just a matter of time before someone cuts themselves.",
+        "effect": "You cannot activate or depart with axes, swords, spears, daggers, scythes, or katars in your gear grid."
       }
     },
     {
       "model": "kingdomdeathapi.disorder",
       "pk": 2,
       "fields": {
-        "name": "Anxiety"
+        "name": "Anxiety",
+        "flavor_text": "You are afraid of being afraid. You're a nervous wreck, and monsters can smell this in your scent.",
+        "effect": "At the start of each showdown, gain the priority target token unless you have stinky gear in your gear grid."
       }
     },
     {
       "model": "kingdomdeathapi.disorder",
       "pk": 3,
       "fields": {
-        "name": "Apathetic"
+        "name": "Apathetic",
+        "flavor_text": "You've given up. Nothing seems to matter. You have no concern for your own wellbeing.",
+        "effect": "You cannot use or gain survival. You cannot gain courage.\nCure this disorder if you have 8+ understanding."
       }
     },
     {
       "model": "kingdomdeathapi.disorder",
       "pk": 4,
       "fields": {
-        "name": "Binge Eating"
+        "name": "Binge Eating",
+        "flavor_text": "Eating is the only thing that helps you escape your miserable life.",
+        "effect": "You cannot depart unless you have consumable gear in your gear grid. You must consume if a choice to consume arises."
       }
     },
     {
       "model": "kingdomdeathapi.disorder",
       "pk": 5,
       "fields": {
-        "name": "Coprolalia"
+        "name": "Coprolalia",
+        "flavor_text": "You have compulsive tics in the form of sporadic muttering, cursing,whimpering, and screaming.",
+        "effect": "All your gear is noisy. You are always a threat unless you are knocked down, even if an effect says otherwise."
       }
     },
     {
       "model": "kingdomdeathapi.disorder",
       "pk": 6,
       "fields": {
-        "name": "Fear of the Dark"
+        "name": "Fear of the Dark",
+        "flavor_text": "You cannot bear the oppressive darkness any longer.",
+        "effect": "You retire.\nIf you gain this disorder during a hunt or showdown, you put on a brave face until you return to the settlement, vowing never to leave the Lantern Hoard again."
       }
     },
     {
       "model": "kingdomdeathapi.disorder",
       "pk": 7,
       "fields": {
-        "name": "Hemophobia"
+        "name": "Hemophobia",
+        "flavor_text": "The mere sight of blood makes you lightheaded, and serious gore can knock you out!",
+        "effect": "During the showdown, whenever a survivor (including you) gains a bleeding token, you are knocked down."
       }
     },
     {
       "model": "kingdomdeathapi.disorder",
       "pk": 8,
       "fields": {
-        "name": "Immortal"
+        "name": "Hoarder",
+        "flavor_text": "You compulsively collect and stash anything you can get your hands on. Every little bit you add to your secret hoard makes your existence feel more real.",
+        "effect": "Whenever you are a returning survivor, archive 1 resource gained from the last showdown and gain +1 courage."
       }
     },
     {
       "model": "kingdomdeathapi.disorder",
       "pk": 9,
       "fields": {
-        "name": "Quixotic"
+        "name": "Honorable",
+        "flavor_text": "You believe in honor and fairness when conducting yourself on the battlefield. It is these strong principles that have kept you alive, and you will not abandon them under any circumstances.",
+        "effect": "You cannot attack a monster from its blind spot or if it is knocked down."
       }
     },
     {
       "model": "kingdomdeathapi.disorder",
       "pk": 10,
       "fields": {
-        "name": "Traumatized"
+        "name": "Hyperactive",
+        "flavor_text": "Whether you are running, fiddling with your gear, or pacing, you are always moving.",
+        "effect": "During the showdown, you must move at least 1 space every round."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 11,
+      "fields": {
+        "name": "Immortal",
+        "flavor_text": "You are immortal! You will live forever and cannot be killed.",
+        "effect": "While you are insane, convert all damage dealt to your hit locations to brain damage. You are so busy reveling in your own glory that you cannot spend survival while insane."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 12,
+      "fields": {
+        "name": "Indecision",
+        "flavor_text": "Past decisions haunt you ceaselessly. You are crippled by indecision, and even the most trivial choices grip you with terror.",
+        "effect": "If you are the event revealer of hunt events that call on you to make a roll, roll twice and use the lower result."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 13,
+      "fields": {
+        "name": "Monster Panic",
+        "flavor_text": "Monsters make you feel bad. Really, really bad.",
+        "effect": "Whenever you suffer brain damage from an intimidate action, suffer 1 additional brain damage."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 14,
+      "fields": {
+        "name": "Post-Traumatic Stress",
+        "flavor_text": "The last hunt was harrowing. All you can do is cower and relive the trauma. Only time can heal your wounds.",
+        "effect": "Next settlement phase, you do not contribute or participate in any endeavors. Skip the next hunt to recover, then remove this disorder"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 15,
+      "fields": {
+        "name": "Prey",
+        "flavor_text": "You are prey. All there is for you is death.",
+        "effect": "You may not spend survival unless you are insane."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 16,
+      "fields": {
+        "name": "Quixotic",
+        "flavor_text": "You carry the weight of your settlement on your shoulders. Everyone is counting on you to save them, and you will rise to the challenge.",
+        "effect": "If you are insane when you depart, gain +1 survival and +1 strength token."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 17,
+      "fields": {
+        "name": "Rageholic",
+        "flavor_text": "Your rage boils out of control, causing you to see red at the slightest provocation.",
+        "effect": "Whenever you suffer a severe injury, also suffer the frenzy brain trauma."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 18,
+      "fields": {
+        "name": "Secretive",
+        "flavor_text": "You love secrets. So much, in fact, that you pretend to have many.",
+        "effect": "When you are a returning survivor, you quickly become preoccupied with your own affairs. You must skip the next hunt to deal with them."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 19,
+      "fields": {
+        "name": "Seizures",
+        "flavor_text": "Lingering damage from your head injuries has caused you to experience periods of uncontrollable shaking and absence of thought.",
+        "effect": "During the showdown, whenever you suffer damage to your head location, you are knocked down."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 20,
+      "fields": {
+        "name": "Squeamish",
+        "flavor_text": "You can't handle bad smells.",
+        "effect": "You cannot depart with any stinky gear in your gear grid. If a status or effect would cause you to become stinky, lose all your survival."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 21,
+      "fields": {
+        "name": "Traumatized",
+        "flavor_text": "Your experiences have left you shaken and paralyzed by fear.",
+        "effect": "Whenever you end your act adjacent to a monster, you are knocked down."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 21,
+      "fields": {
+        "name": "Vestiphobia",
+        "flavor_text": "Even the lightest armor rubs harshly against your skin and constricts your ability to move.",
+        "effect": "You cannot wear armor at the body location. If you are wearing armor at the body location when you gain this disorder, archive it as you tear it off your person!"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 22,
+      "fields": {
+        "name": "Weak Spot",
+        "flavor_text": "You have an imaginary infirmity.",
+        "effect": "When you gain this disorder, roll a random hit location and record it. You cannot depart unless you have armor at this hit location."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 23,
+      "fields": {
+        "name": "Arithmophilia",
+        "flavor_text": "You love numbers. Your life must exist in perfect arithmetical harmony.",
+        "effect": "When you gain this disorder, roll 1d5. Your movement is that number.\nIgnore all other movement modifiers.",
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 24,
+      "fields": {
+        "name": "Destined",
+        "flavor_text": "You have a grand destiny that you must fulfill.",
+        "effect": "If you do not depart, lose all survival and insanity.",
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 25,
+      "fields": {
+        "name": "Performance Anxiety",
+        "flavor_text": "You're not ready to love.",
+        "effect": "You cannot be nominated for Intimacy.\nCure this disorder if you have 8+ courage.",
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 26,
+      "fields": {
+        "name": "Superstitious",
+        "flavor_text": "Evil magic will be your undoing. You do not believe in abusing the other.",
+        "effect": "You cannot activate or depart with other gear in your gear grid.",
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 27,
+      "fields": {
+        "name": "Motion Sickness",
+        "flavor_text": "Moving quickly makes you want to vomit.",
+        "effect": "Whenever you would suffer knockback, gain 2 bleeding tokens instead.",
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 28,
+      "fields": {
+        "name": "Vermin Obsession",
+        "flavor_text": "You love insects.",
+        "effect": "While there is a Bug Patch terrain tile on the showdown board, you are so overwhelmed that you are doomed.",
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 29,
+      "fields": {
+        "name": "Flower Addiction",
+        "flavor_text": "An insatiable hunger has bloomed in you, delicate and sickeningly sweet.",
+        "effect": "You may only depart to hunt the Flower Knight. After you depart, cure this disorder.",
+        "expansion": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 30,
+      "fields": {
+        "name": "Ghostly Beauty",
+        "flavor_text": "You cannot experience fear if you do not exist.",
+        "effect": "Double all insanity you gain. Double all survival you spend.",
+        "expansion": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 31,
+      "fields": {
+        "name": "Narcissistic",
+        "flavor_text": "There is nothing in the world more beautiful than yourself.",
+        "effect": "You may not wear armor at the head location. If you are wearing armor at the head location when you gain this disorder, archive it.",
+        "expansion": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 32,
+      "fields": {
+        "name": "Absent Seizures",
+        "flavor_text": "No one knows where your mind goes when you're gone, not even you.",
+        "effect": "The first time you would suffer a brain trauma each showdown, you are instead knocked down and forget a fighting art (erase it).",
+        "expansion": 4
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 33,
+      "fields": {
+        "name": "Megalophobia",
+        "flavor_text": "Even large, looming shadows make you jumpy.",
+        "effect": "You may not depart for hunts or showdowns with monsters that occupy more than 4 spaces on the showdown board.",
+        "expansion": 4
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 31,
+      "fields": {
+        "name": "Delicious",
+        "flavor_text": "Predators of all shapes and sizes find your scent irresistible.",
+        "effect": "You are still considered a threat when you are knocked down (unless you use an effect that says otherwise).",
+        "expansion": 5
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 32,
+      "fields": {
+        "name": "Enfeebled",
+        "flavor_text": "You are a delicate flower, wilting in the darkness.",
+        "effect": "It takes one less bleeding token to kill you.",
+        "expansion": 5
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 33,
+      "fields": {
+        "name": "Stark Raving",
+        "flavor_text": "Freedom awaits those pushed this far beyond the breaking point.",
+        "effect": "You are always insane, regardless of your insanity.",
+        "expansion": 5
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 34,
+      "fields": {
+        "name": "Tunnel Vision",
+        "flavor_text": "If you're not killing something, you're wasting your time.",
+        "effect": "When you spend Activation, you may only activate weapons.",
+        "expansion": 5
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 35,
+      "fields": {
+        "name": "Prima Donna",
+        "flavor_text": "The double-edged sword of fame is the only weapon you require.",
+        "effect": "Each survivor turn, you must take your act first (roll off each turn if multiple survivors have this disorder).",
+        "expansion": 6
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 36,
+      "fields": {
+        "name": "Shallow Lungs",
+        "flavor_text": "Yelling makes you feel light-headed.",
+        "effect": "When you encourage, you are knocked down.",
+        "expansion": 6
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 37,
+      "fields": {
+        "name": "Stage Fright",
+        "flavor_text": "You hate being the center of attention.",
+        "effect": "Whenever you become doomed or gain the priority target token, lose 1 survival.",
+        "expansion": 6
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 38,
+      "fields": {
+        "name": "Unlucky",
+        "flavor_text": "Your mother always said you were born under a bad sign.",
+        "effect": "You cannot critically wound.",
+        "expansion": 6
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 39,
+      "fields": {
+        "name": "Hyper-Sensitivity",
+        "flavor_text": "Your will to survive has become indefatigable.",
+        "effect": "You may dodge one additional time per round. Whenever you are hit by an attack, you must dodge at least once, if possible.",
+        "expansion": 9
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 40,
+      "fields": {
+        "name": "Spiral Ganglia",
+        "flavor_text": "The roads in your mind cross and reveal a strange new path.",
+        "effect": "At the start of the showdown, gain the Darkness Awareness survivor status card.",
+        "expansion": 9
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 41,
+      "fields": {
+        "name": "Controlophobia",
+        "flavor_text": "You are deeply afraid of being the monster controller.",
+        "effect": "While you are the monster controller, double any damage you suffer.",
+        "expansion": 10
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 42,
+      "fields": {
+        "name": "Revenge",
+        "flavor_text": "When a fellow hunter perishes, you lose control.",
+        "effect": "When a survivor dies during the showdown, suffer the Frenzy brain trauma.",
+        "expansion": 10
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 43,
+      "fields": {
+        "name": "Tiny Arachnophobia",
+        "flavor_text": "You are irrationally scared by tiny spiders and the things they produce.",
+        "effect": "You cannot carry any gear with the amber keyword. You cannot gain any resources with the silk keyword.",
+        "expansion": 10
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 44,
+      "fields": {
+        "name": "Emotionless",
+        "flavor_text": "You don't have any emotions. You've hidden this from everyone by mimicking their social interactions.",
+        "effect": "You cannot gain +1 strength tokens.",
+        "expansion": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 45,
+      "fields": {
+        "name": "Overprotective",
+        "flavor_text": "You love the feeling of being needed.",
+        "effect": "When an adjacent survivor is knocked down, you are also knocked down as you rush to their aid.",
+        "expansion": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 46,
+      "fields": {
+        "name": "Sun-Drunk",
+        "flavor_text": "When your emotions rise, you can only think of violence.",
+        "effect": "When you have any +1 strength tokens, you cannot dash, dodge or Story Event Run Away.",
+        "expansion": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 47,
+      "fields": {
+        "name": "Bloodlust",
+        "flavor_text": "A single glimpse of red and that is all you can see.",
+        "effect": "Whenever a survivor gains a bleeding token, suffer the frenzy disorder. Limit once per round.",
+        "expansion": 12
+      }
+    },
+    {
+      "model": "kingdomdeathapi.disorder",
+      "pk": 48,
+      "fields": {
+        "name": "Phobophobia",
+        "flavor_text": "You fear fear.",
+        "effect": "At the start of your act, if you have 0 insanity, gain the Terrified survivor status card.",
+        "expansion": 12
       }
     }
   ]
