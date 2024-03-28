@@ -1,0 +1,79 @@
+[
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 1,
+        "fields": {
+          "name": "Dragon King"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 2,
+        "fields": {
+          "name": "Dung Beetle Knight"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 3,
+        "fields": {
+          "name": "Flower Knight"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 4,
+        "fields": {
+          "name": "Gorm"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 5,
+        "fields": {
+          "name": "Lion God"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 6,
+        "fields": {
+          "name": "Lion Knight"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 7,
+        "fields": {
+          "name": "Lonely Tree"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 8,
+        "fields": {
+          "name": "Manhunter"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 9,
+        "fields": {
+          "name": "Slenderman"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 10,
+        "fields": {
+          "name": "Spidicules"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.expansiontype",
+        "pk": 11,
+        "fields": {
+          "name": "Sunstalker"
+        }
+    }
+]
