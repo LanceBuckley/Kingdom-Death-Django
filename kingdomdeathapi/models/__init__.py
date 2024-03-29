@@ -16,3 +16,5 @@ from .session import Session
 from .expansion_type import ExpansionType
 from .impairment import Impairment
 from .campaign import Campaign
+from .proficiency_level import ProficiencyLevel
+from .monster import Monster

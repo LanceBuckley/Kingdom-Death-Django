@@ -9,6 +9,7 @@ python3 manage.py loaddata users
 python3 manage.py loaddata tokens
 python3 manage.py loaddata players
 python3 manage.py loaddata expansion_types
+python3 manage.py loaddata monsters
 python3 manage.py loaddata settlements
 python3 manage.py loaddata resource_types
 python3 manage.py loaddata resources
@@ -21,6 +22,7 @@ python3 manage.py loaddata disorders
 python3 manage.py loaddata abilities
 python3 manage.py loaddata impairments
 python3 manage.py loaddata survivors
+python3 manage.py loaddata proficiency_levels
 python3 manage.py loaddata settlement_inventories
 python3 manage.py loaddata settlement_events
 python3 manage.py loaddata sessions
