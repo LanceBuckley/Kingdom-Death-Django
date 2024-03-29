@@ -1,0 +1,9 @@
+[
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 1,
+        "fields": {
+          "name": "White Lion"
+        }
+    }
+]

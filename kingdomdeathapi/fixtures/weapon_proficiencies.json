@@ -3,77 +3,128 @@
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 1,
       "fields": {
-        "name": "Axe"
+        "name": "Axe",
+        "specialist_effect": "When attacking with an axe, if your wound attempt fails, you may ignore it and attempt to wound the selected hit location again.\nLimit, once per attack.",
+        "master_effect": "When an Axe Master wounds a monster with an axe at a location with a persistent injury, that wound becomes a critical wound.\nAll survivors gain Axe Specialization in addition to their other weapon proficiencies."
       }
     },
     {
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 2,
       "fields": {
-        "name": "Bow"
+        "name": "Bow",
+        "specialist_effect": "When attacking with a bow, you may reroll any misses once.\nLimit, once per attack.",
+        "master_effect": "If you are a Bow Master, all bows in your gear grid gain Deadly 2. In addition, ignore cumbersome on all bows.\nAll survivors gain Bow Specialization in addition to their other weapon proficiencies."
       }
     },
     {
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 3,
       "fields": {
-        "name": "Club"
+        "name": "Club",
+        "specialist_effect": "When attacking with a club, on a Perfect hit, double your wound attempt total on the first selected hit location.\nLimit, once per attack.",
+        "master_effect": "When a Club Master attacks with a club, if a successful wound attempt total is greater than or equal to twice the monster's toughness, inflict an additional wound.\nAll survivors gain Club Specialization in addition to their other weapon proficiencies."
       }
     },
     {
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 4,
       "fields": {
-        "name": "Dagger"
+        "name": "Dagger",
+        "specialist_effect": "When attacking with a Dagger, if a wound attempt fails, after performing any reactions, you may discard another drawn hit location card to attempt to wound the failed hit location again.\nLimit, once per attack.",
+        "master_effect": "After a wounded hit location is discarded, a Dagger Master who is adjacent to the attacker and the wounded monster may spend 1 survival to re-draw the wounded hit location and attempt to wound with a dagger. Treat monster reactions on the re-drawn hit location card normally.\nAll survivors gain Dagger Specialization in addition to their other weapon proficiencies."
       }
     },
     {
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 5,
       "fields": {
-        "name": "Fist&Tooth"
+        "name": "Fist&Tooth",
+        "specialist_effect": "You may stand (if knocked down) at the start of the monster's turn or the survivor's turn.\nLimit, once per round.",
+        "master_effect": "While a survivor is a Fist & Tooth Master, they gain +2 permanent accuracy and +2 permanent strength (they receive this bonus even when not attacking with Fist & Tooth).\nAll survivors gain Fist & Tooth Specialization in addition to their other weapon proficiencies."
       }
     },
     {
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 6,
       "fields": {
-        "name": "Grand"
+        "name": "Grand",
+        "specialist_effect": "When attacking with a grand weapon, gain +1 accuracy.\nWhen attacking with a grand weapon during your act, if you critically wound, the monster is knocked down.",
+        "master_effect": "When a Grand Weapon Master perfectly hits with a grand weapon, cancel all reactions for that attack.\nAll survivors gain Grand Weapon Specialization in addition to their other weapon proficiencies."
       }
     },
     {
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 7,
       "fields": {
-        "name": "Katar"
+        "name": "Katar",
+        "specialist_effect": "When attacking with a katar, cancel reactions on the first selected hit locations.",
+        "master_effect": "If you are a Katar Master, gain a +1 evasion token on a Perfect hit with a katar. When you are knocked down, remove all +1 evasion tokens.\nAll survivors gain Katar Specialization in addition to their other weapon proficiencies."
       }
     },
     {
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 8,
       "fields": {
-        "name": "Shield"
+        "name": "Shield",
+        "specialist_effect": "While a shield is in your gear grid, you are no longer knocked down after Collision with a monster.\nWhile a shield is in your gear grid, add 1 to all hit locations.",
+        "master_effect": "When a Shield Master is adjacent to a survivor that is targeted by a monster, they may swap spaces on the board with the survivor and become the target instead. The master must have a shield to perform this.\nAll survivors gain Shield Specialization in addition to their other weapon proficiencies."
       }
     },
     {
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 9,
       "fields": {
-        "name": "Spear"
+        "name": "Spear",
+        "specialist_effect": "When attacking with a spear, if you draw a trap, roll 1d10. On a 7+, cancel the trap. Discard it, then reshuffle the hit location discard into the hit location deck and draw a new card.\nLimit, once per round.",
+        "master_effect": "Whenever a Spear Master hits a monster with a spear, they may spend 1 survival to gain the priority target token. If they made the hit from directly behind another survivor, that survivor gains the priority target token instead.\nAll survivors gain Spear Specialization in addition to their other weapon proficiencies."
       }
     },
     {
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 10,
       "fields": {
-        "name": "Sword"
+        "name": "Sword",
+        "specialist_effect": "When attacking with a sword, after drawing hit locations, make a wound attempt and then select a hit location to resolve with that result.\nLimit, once per attack.",
+        "master_effect": "A Sword Master gains +1 accuracy, +1 strength, and +1 speed when attacking with a Sword.\nAll survivors gain Sword Specialization in addition to their other weapon proficiencies."
       }
     },
     {
       "model": "kingdomdeathapi.weaponproficiency",
       "pk": 11,
       "fields": {
-        "name": "Whip"
+        "name": "Twilight Sword",
+        "specialist_effect": "This sentient sword improves as it's used. Gain the effects as proficiency rank increases.\n2 Ignore Cumbersome on Twilight Sword.\n4 When attacking with the Twilight Sword, ignore slow and gain +2 speed.\n6 Twilight Sword gains deadly",
+        "master_effect": "Any survivor who attains Twilight Sword Mastery leaves the settlement forever in pursuit of a higher purpose. Remove them from the settlement's population. You may place the master's Twilight Sword in another survivor's gear grid or archive it."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 12,
+      "fields": {
+        "name": "Whip",
+        "specialist_effect": "When you wound with a whip, instead of moving the top card of the AI deck into the wound stack, you may move the top card of the AI discard pile.\nLimit, once per attack.",
+        "master_effect": "Whip Masters gain +5 strength when attacking with a whip.\nAll survivors gain Whip Specialization in addition to their other weapon proficiencies."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 13,
+      "fields": {
+        "name": "Katana",
+        "specialist_effect": "You may not select this as your weapon type.\nIf you are blind and have 4+ levels of Katana proficiency, gain the following:\nOn your first Perfect hit each attack with a Katana, do not draw a hit location. The monster suffers 1 wound.",
+        "master_effect": "When a survivor reaches Katana Mastery, they leave the settlement forever, heeding the call of the storm to hone their art.\nBefore the master leaves, you may nominate a survivor. Set that survivor's weapon type to Katana and their weapon proficiency level to 1.",
+        "expansion": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.weaponproficiency",
+      "pk": 13,
+      "fields": {
+        "name": "Scythe",
+        "specialist_effect": "When you critically wound with a scythe, roll 1d10. On a 6+, shuffle the hit location deck (do not shuffle unresolved hit locations).\nLimit, once per round.",
+        "master_effect": "At the start of a Scythe Master's act, if they are insane, they gain +1 Activation, which they may only spend to activate scythes.",
+        "expansion": 1
       }
     }
   ]

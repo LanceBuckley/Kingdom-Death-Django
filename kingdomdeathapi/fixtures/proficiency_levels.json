@@ -1,0 +1,11 @@
+[
+    {
+        "model": "kingdomdeathapi.proficiencylevel",
+        "pk": 1,
+        "fields": {
+          "weapon_type": 1,
+          "survivor": 1,
+          "level": 1
+        }
+    }
+]
