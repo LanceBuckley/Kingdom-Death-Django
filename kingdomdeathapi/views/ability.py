@@ -21,6 +21,29 @@ class AbilityView(ViewSet):
         """
         abilities = Ability.objects.all()
 
+        expansion_mappings = {
+            "dragon_king_exp": 1,
+            "dung_beetle_knight_exp": 2,
+            "flower_knight_exp": 3,
+            "gorm_exp": 4,
+            "lion_god_exp": 5,
+            "lion_knight_exp": 6,
+            "lonely_tree_exp": 7,
+            "manhunter_exp": 8,
+            "slenderman_exp": 9,
+            "spidicules_exp": 10,
+            "sunstalker_exp": 11,
+            "gamblers_chest_exp": 12
+        }
+
+        for param, expansion_id in expansion_mappings.items():
+            if request.query_params.get(param) is not None:
+                value = request.query_params.get(param) == 'true'
+                if value:
+                    abilities = abilities.filter(expansion=expansion_id)
+                else:
+                    abilities = abilities.exclude(expansion=expansion_id)
+
         if request.query_params.get('expansion') is not None:
             if request.query_params.get('expansion') == 'true':
                 # The Q() syntax selects objects that follow the expression within the brackets. The ~ negates the expression
