@@ -3,24 +3,30 @@
     "model": "kingdomdeathapi.resource",
     "pk": 1,
     "fields": {
-      "name": "Hide",
-      "type": 1
+      "name": "Monster Hide",
+      "type": 1,
+      "flavor_text": "",
+      "effect": ""
     }
   },
   {
     "model": "kingdomdeathapi.resource",
     "pk": 2,
     "fields": {
-      "name": "Bone",
-      "type": 2
+      "name": "Monster Bone",
+      "type": 2,
+      "flavor_text": "",
+      "effect": ""
     }
   },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 3,
       "fields": {
-        "name": "Organ",
-        "type": 3
+        "name": "Monster Organ",
+        "type": 3,
+        "flavor_text": "",
+        "effect": ""
       }
     },
     {
@@ -28,9 +34,75 @@
       "pk": 4,
       "fields": {
         "name": "Broken Lantern",
-        "type": 4
+        "type": 4,
+        "flavor_text": "",
+        "effect": ""
       }
     },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 5,
+      "fields": {
+        "name": "Love Juice",
+        "type": 3,
+        "flavor_text": "",
+        "effect": ""
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 6,
+      "fields": {
+        "name": "Skull",
+        "type": 2,
+        "flavor_text": "",
+        "effect": ""
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 7,
+      "fields": {
+        "name": "Perfect Hide",
+        "type": 1,
+        "flavor_text": "",
+        "effect": ""
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 8,
+      "fields": {
+        "name": "Perfect Bone",
+        "type": 2,
+        "flavor_text": "",
+        "effect": ""
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 9,
+      "fields": {
+        "name": "Perfect Organ",
+        "type": 3,
+        "flavor_text": "",
+        "effect": ""
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 10,
+      "fields": {
+        "name": "???",
+        "type": [1, 2, 3],
+        "flavor_text": "",
+        "effect": ""
+      }
+    },
+
+
+
+
     {
       "model": "kingdomdeathapi.resource",
       "pk": 5,

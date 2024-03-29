@@ -26,5 +26,19 @@
         "fields": {
           "name": "Scrap"
         }
+    },
+    {
+      "model": "kingdomdeathapi.resourcetype",
+      "pk": 5,
+      "fields": {
+        "name": "Herb"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resourcetype",
+      "pk": 6,
+      "fields": {
+        "name": "Flower"
+      }
     }
 ]
