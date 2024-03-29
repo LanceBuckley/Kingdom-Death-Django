@@ -2,7 +2,8 @@ from rest_framework import serializers
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
-from kingdomdeathapi.models import Disorder
+from django.db.models import Q
+from kingdomdeathapi.models import Disorder, ExpansionType
 
 
 class DisorderView(ViewSet):
@@ -19,6 +20,36 @@ class DisorderView(ViewSet):
             Response: A serialized dictionary and HTTP status 200 OK.
         """
         disorders = Disorder.objects.all()
+
+        expansion_mappings = {
+            "dragon_king_exp": 1,
+            "dung_beetle_knight_exp": 2,
+            "flower_knight_exp": 3,
+            "gorm_exp": 4,
+            "lion_god_exp": 5,
+            "lion_knight_exp": 6,
+            "lonely_tree_exp": 7,
+            "manhunter_exp": 8,
+            "slenderman_exp": 9,
+            "spidicules_exp": 10,
+            "sunstalker_exp": 11,
+            "gamblers_chest_exp": 12
+        }
+
+        for param, expansion_id in expansion_mappings.items():
+            if request.query_params.get(param) is not None:
+                value = request.query_params.get(param) == 'true'
+                if value:
+                    disorders = disorders.filter(expansion=expansion_id)
+                else:
+                    disorders = disorders.exclude(expansion=expansion_id)
+
+        if request.query_params.get('expansion') is not None:
+            if request.query_params.get('expansion') == 'true':
+                # The Q() syntax selects objects that follow the expression within the brackets. The ~ negates the expression
+                disorders = disorders.filter(~Q(expansion=None))
+            if request.query_params.get('expansion') == 'false':
+                disorders = disorders.filter(expansion__isnull=True)
 
         serializer = DisorderSerializer(disorders, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -103,10 +134,18 @@ class DisorderView(ViewSet):
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Disorder.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
+        
+
+class ExpansionTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ExpansionType
+        fields = ('id', 'name',)
 
 
 class DisorderSerializer(serializers.ModelSerializer):
 
+    expansion = ExpansionTypeSerializer(many=False)
+
     class Meta:
         model = Disorder
-        fields = ('id', 'name', )
+        fields = ('id', 'name', 'flavor_text', 'effect', 'expansion')
