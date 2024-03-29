@@ -38,6 +38,20 @@
       "model": "kingdomdeathapi.resourcetype",
       "pk": 6,
       "fields": {
+        "name": "Iron"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resourcetype",
+      "pk": 7,
+      "fields": {
+        "name": "Vermin"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resourcetype",
+      "pk": 8,
+      "fields": {
         "name": "Flower"
       }
     }
