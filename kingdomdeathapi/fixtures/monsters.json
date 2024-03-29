@@ -5,5 +5,243 @@
         "fields": {
           "name": "White Lion"
         }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 2,
+        "fields": {
+          "name": "Screaming Antelope"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 3,
+        "fields": {
+          "name": "Phoenix"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 4,
+        "fields": {
+          "name": "Butcher",
+          "nemesis": true
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 5,
+        "fields": {
+          "name": "King's Man",
+          "nemesis": true
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 6,
+        "fields": {
+          "name": "The Hand",
+          "nemesis": true
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 7,
+        "fields": {
+          "name": "Watcher",
+          "core": true
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 8,
+        "fields": {
+          "name": "Gold Smoke Knight"
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 9,
+        "fields": {
+          "name": "Dragon King",
+          "core": true,
+          "expansion": 1
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 10,
+        "fields": {
+          "name": "Tyrant",
+          "nemesis": true,
+          "expansion": 1
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 11,
+        "fields": {
+          "name": "Dung Beetle Knight",
+          "expansion": 2
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 12,
+        "fields": {
+          "name": "Flower Knight",
+          "expansion": 3
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 13,
+        "fields": {
+          "name": "Gorm",
+          "expansion": 4
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 14,
+        "fields": {
+          "name": "Lion God",
+          "expansion": 5
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 15,
+        "fields": {
+          "name": "Lion Knight",
+          "nemesis": true,
+          "expansion": 6
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 16,
+        "fields": {
+          "name": "Lonely Tree",
+          "nemesis": true,
+          "expansion": 7
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 17,
+        "fields": {
+          "name": "Manhunter",
+          "nemesis": true,
+          "expansion": 8
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 18,
+        "fields": {
+          "name": "Slenderman",
+          "nemesis": true,
+          "expansion": 9
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 19,
+        "fields": {
+          "name": "Spidicules",
+          "expansion": 10
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 20,
+        "fields": {
+          "name": "Sunstalker",
+          "expansion": 11
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 21,
+        "fields": {
+          "name": "Crimson Crocodile",
+          "expansion": 12
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 22,
+        "fields": {
+          "name": "Smog Singers",
+          "expansion": 12
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 23,
+        "fields": {
+          "name": "King",
+          "expansion": 12
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 24,
+        "fields": {
+          "name": "Atnas",
+          "nemesis": true,
+          "expansion": 12
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 25,
+        "fields": {
+          "name": "The Gambler",
+          "core": true,
+          "expansion": 12
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 26,
+        "fields": {
+          "name": "Beast of Sorrow",
+          "legendary": true
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 27,
+        "fields": {
+          "name": "Golden Eyed King of 1,000 Years",
+          "legendary": true
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 28,
+        "fields": {
+          "name": "Great Golden Cat",
+          "legendary": true
+    }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 29,
+        "fields": {
+          "name": "Mad Steed",
+          "legendary": true
+        }
+    },
+    {
+        "model": "kingdomdeathapi.monster",
+        "pk": 30,
+        "fields": {
+          "name": "Old Master",
+          "legendary": true,
+          "expansion": 2
+        }
     }
 ]

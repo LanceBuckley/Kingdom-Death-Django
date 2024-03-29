@@ -3,24 +3,28 @@
     "model": "kingdomdeathapi.resource",
     "pk": 1,
     "fields": {
-      "name": "Hide",
-      "type": 1
+      "name": "Monster Hide",
+      "type": [1],
+      "flavor_text": "The skin of a beast."
     }
   },
   {
     "model": "kingdomdeathapi.resource",
     "pk": 2,
     "fields": {
-      "name": "Bone",
-      "type": 2
+      "name": "Monster Bone",
+      "type": [2],
+      "flavor_text": "A bone suitable for crafting."
     }
   },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 3,
       "fields": {
-        "name": "Organ",
-        "type": 3
+        "name": "Monster Organ",
+        "type": [3],
+        "effect": "If you consume this, archive this card. Roll 1d10. On a result of 6+, you contract a parasite. Archive all consumable gear in your gear grid now.",
+        "consumable": true
       }
     },
     {
@@ -28,87 +32,830 @@
       "pk": 4,
       "fields": {
         "name": "Broken Lantern",
-        "type": 4
+        "type": [4],
+        "flavor_text": "Remains of an extinguished lantern."
       }
     },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 5,
       "fields": {
-        "name": "Curious Hand",
-        "type": 1
+        "name": "Love Juice",
+        "type": [3],
+        "effect": "During the settlement phase, you may archive this to Story Event Intimacy. Nominated survivors must be able to consume.",
+        "consumable": true
       }
     },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 6,
       "fields": {
-        "name": "Eye of Cat",
-        "type": 3
+        "name": "Skull",
+        "type": [2],
+        "effect": "When you gain this, a survivor of your choice gains +1 insanity."
       }
     },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 7,
       "fields": {
-        "name": "Golden Whiskers",
-        "type": 3
+        "name": "Perfect Hide",
+        "type": [1],
+        "flavor_text": "Supreme texture."
       }
     },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 8,
       "fields": {
-        "name": "Great Cat Bone",
-        "type": 2
+        "name": "Perfect Bone",
+        "type": [2],
+        "flavor_text": "A mind numbingly perfect bone."
       }
     },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 9,
       "fields": {
-        "name": "Lion Claw",
-        "type": 2
+        "name": "Perfect Organ",
+        "type": [3],
+        "effect": "If you consume this, archive this card. Roll 1d10. On a result of 6+, you contract a millennium parasite and gain +10 Hunt XP.",
+        "consumable": true
       }
     },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 10,
       "fields": {
-        "name": "Lion Tail",
-        "type": 1
+        "name": "???",
+        "type": [1, 2, 3],
+        "flavor_text": "You have no idea what monster bit this is. Can be used as a bone, organ or hide!"
       }
     },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 11,
       "fields": {
-        "name": "Lion Testes",
-        "type": 3
+        "name": "Black Lichen",
+        "type": [1, 2, 3],
+        "flavor_text": "Malleable, pungent and attractive.",
+        "effect": "You may consume this. If you do, your lips turn gray, your hair whitens and you become infertile. Gain +1 courage, +1 understanding and suffer the destroyed genitals severe waist injury.",
+        "consumable": true,
+        "strange": true
       }
     },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 12,
       "fields": {
-        "name": "Shimmering Mane",
-        "type": 1
+        "name": "Cocoon Membrane",
+        "type": [3],
+        "flavor_text": "Thin copper hairs permeate this jellylike substance. Lanterns are repelled by the copper hairs, their light bending to avoid them.",
+        "strange": true
       }
     },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 13,
       "fields": {
-        "name": "Sinew",
-        "type": 3
+        "name": "Elder Cat Teeth",
+        "type": [2],
+        "flavor_text": "As sharp as they are strange.",
+        "strange": true
       }
     },
     {
       "model": "kingdomdeathapi.resource",
       "pk": 14,
       "fields": {
+        "name": "Fresh Acanthus",
+        "type": [5],
+        "effect": "Archive this to fully heal 1 hit location, including injury levels and armor points.",
+        "strange": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 15,
+      "fields": {
+        "name": "Iron",
+        "type": [6],
+        "flavor_text": "Harder than bone.",
+        "strange": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 16,
+      "fields": {
+        "name": "Lantern Tube",
+        "type": [3, 4],
+        "flavor_text": "A fleshy, muscle-lined tube.",
+        "effect": "When you gain this, roll 1d10. On a 6+, you find something stuck inside! Add 1 Broken Lantern basic resource to the settlement's storage.",
+        "strange": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 17,
+      "fields": {
+        "name": "Leather",
+        "type": [1],
+        "flavor_text": "Never goes out of style.",
+        "strange": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 18,
+      "fields": {
+        "name": "Perfect Crucible",
+        "type": [6],
+        "effect": "When you craft with Perfect Crucible, an ancient bacteria is released into the air. Suffer -1d10 population and archive this card.",
+        "strange": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 19,
+      "fields": {
+        "name": "Phoenix Crest",
+        "type": [3],
+        "flavor_text": "Firm and supple.",
+        "strange": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 20,
+      "fields": {
+        "name": "Legendary Horns",
+        "type": [2, 4],
+        "flavor_text": "Holding them fills you with power.",
+        "strange": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 21,
+      "fields": {
+        "name": "Second Heart",
+        "type": [2, 3],
+        "flavor_text": "It still tries to bite you.",
+        "strange": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 22,
+      "fields": {
+        "name": "Curious Hand",
+        "type": [1],
+        "flavor_text": "Holding this fills you with sadness.",
+        "effect": "When you gain this, a random survivor gains +1 insanity.",
+        "monster": true,
+        "monster_origin": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 23,
+      "fields": {
+        "name": "Eye of Cat",
+        "type": [3],
+        "flavor_text": "A perfectly preserved eye.",
+        "consumable": true,
+        "monster": true,
+        "monster_origin": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 24,
+      "fields": {
+        "name": "Golden Whiskers",
+        "type": [3],
+        "flavor_text": "These whiskers are tough!",
+        "monster": true,
+        "monster_origin": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 25,
+      "fields": {
+        "name": "Great Cat Bone",
+        "type": [2],
+        "flavor_text": "Strong and surprisingly light.",
+        "monster": true,
+        "monster_origin": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 26,
+      "fields": {
+        "name": "Lion Claw",
+        "type": [2],
+        "flavor_text": "A razor-sharp, retractable claw.",
+        "monster": true,
+        "monster_origin": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 27,
+      "fields": {
+        "name": "Lion Tail",
+        "type": [1],
+        "flavor_text": "It's surprisingly heavy.",
+        "monster": true,
+        "monster_origin": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 28,
+      "fields": {
+        "name": "Lion Testes",
+        "type": [3],
+        "flavor_text": "A hefty pair of nuts.",
+        "consumable": true,
+        "monster": true,
+        "monster_origin": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 29,
+      "fields": {
+        "name": "Shimmering Mane",
+        "type": [1],
+        "flavor_text": "It shimmers in the lantern light.",
+        "effect": "Archive this to gain 2 basic hide resources.",
+        "monster": true,
+        "monster_origin": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 30,
+      "fields": {
+        "name": "Sinew",
+        "type": [3],
+        "flavor_text": "These stringy guts are quite useful.",
+        "monster": true,
+        "monster_origin": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 31,
+      "fields": {
         "name": "White Fur",
-        "type": 1
+        "type": [1],
+        "flavor_text": "Luxurious and soft to the touch.",
+        "monster": true,
+        "monster_origin": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 32,
+      "fields": {
+        "name": "Beast Steak",
+        "type": [3],
+        "flavor_text": "Shockingly Appetizing.",
+        "consumable": true,
+        "monster": true,
+        "monster_origin": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 33,
+      "fields": {
+        "name": "Bladder",
+        "type": [3],
+        "flavor_text": "It shimmers in the lantern light.",
+        "effect": "Archive this to gain 2 basic hide resources.",
+        "consumable": true,
+        "monster": true,
+        "monster_origin": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 34,
+      "fields": {
+        "name": "Large Flat Tooth",
+        "type": [2],
+        "flavor_text": "Its surface is rough and bumpy.",
+        "effect": "When you gain this, a survivor of your choice gains +1 insanity.",
+        "monster": true,
+        "monster_origin": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 35,
+      "fields": {
+        "name": "Muscly Gums",
+        "type": [3],
+        "flavor_text": "Difficult to pry apart.",
+        "consumable": true,
+        "monster": true,
+        "monster_origin": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 36,
+      "fields": {
+        "name": "Pelt",
+        "type": [1],
+        "flavor_text": "Coarse and warm.",
+        "monster": true,
+        "monster_origin": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 37,
+      "fields": {
+        "name": "Screaming Brain",
+        "type": [3],
+        "effect": "Consume: Archive this and gain survival up to the current limit.",
+        "consumable": true,
+        "monster": true,
+        "monster_origin": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 38,
+      "fields": {
+        "name": "Shank Bone",
+        "type": [2],
+        "flavor_text": "Strangely jointed.",
+        "monster": true,
+        "monster_origin": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 39,
+      "fields": {
+        "name": "Spiral Horn",
+        "type": [2],
+        "flavor_text": "Moans balefully when blown.",
+        "monster": true,
+        "monster_origin": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 40,
+      "fields": {
+        "name": "Bird Beak",
+        "type": [2],
+        "flavor_text": "Surprisingly toothy.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 41,
+      "fields": {
+        "name": "Black Skull",
+        "type": [2, 5],
+        "flavor_text": "Aged to perfection.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 42,
+      "fields": {
+        "name": "Hollow Wing Bones",
+        "type": [2],
+        "flavor_text": "Delicate and finely balanced",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 43,
+      "fields": {
+        "name": "Muculent Droppings",
+        "type": [3],
+        "flavor_text": "Delicately scented, papery husk.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 44,
+      "fields": {
+        "name": "Phoenix Eye",
+        "type": [3, 4],
+        "flavor_text": "Filled with a thick metallic liquid.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 45,
+      "fields": {
+        "name": "Phoenix Finger",
+        "type": [2],
+        "effect": "When you gain this, a survivor of your choice gains +3 insanity.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 46,
+      "fields": {
+        "name": "Phoenix Whisker",
+        "type": [1],
+        "flavor_text": "Silky, yet robust.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 47,
+      "fields": {
+        "name": "Pustules",
+        "type": [3],
+        "flavor_text": "The aroma is tempting.",
+        "consumable": true,
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 48,
+      "fields": {
+        "name": "Rainbow Droppings",
+        "type": [3],
+        "effect": "Consume: Archive this and roll 1d10. On a 7+, gain +1 permanent speed. Otherwise, your heart explodes, killing you instantly.",
+        "consumable": true,
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 49,
+      "fields": {
+        "name": "Shimmering Halo",
+        "type": [3],
+        "flavor_text": "Curiously heavy.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 50,
+      "fields": {
+        "name": "Small Feathers",
+        "type": [1],
+        "flavor_text": "Soft interior with razor sharp edges.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 51,
+      "fields": {
+        "name": "Small Hand Parasites",
+        "type": [3],
+        "flavor_text": "Still wriggling.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 52,
+      "fields": {
+        "name": "Tail Feathers",
+        "type": [1],
+        "flavor_text": "Lighter than air.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 53,
+      "fields": {
+        "name": "Wishbone",
+        "type": [2],
+        "flavor_text": "A delicate bone with a strange aura.",
+        "monster": true,
+        "monster_origin": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 54,
+      "fields": {
+        "name": "Crab Spider",
+        "type": [1, 7],
+        "effect": "Consume: Archive this and gain +3 survival.",
+        "consumable": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 55,
+      "fields": {
+        "name": "Cyclops Fly",
+        "type": [7],
+        "effect": "Consume: Archive this and roll 1d10.\n1d10 Result\n1 - 3 The fly's eye explodes, releasing acids that melt your insides. You die.\n4 - 5 Slight citrus flavor. No effect.\n6+ Gain permanent +1 accuracy.",
+        "consumable": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 56,
+      "fields": {
+        "name": "Fiddler Crab Spider",
+        "type": [1, 7],
+        "flavor_text": "Consume: Archive this and gain the Armored Fist fighting art.",
+        "consumable": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 57,
+      "fields": {
+        "name": "Gibbering Haremite",
+        "type": [7],
+        "effect": "When you gain this, unless you consume it immediately, it latches on and removes all head armor points. If this is in the settlement storage when survivors depart, add another to storage and suffer -1 population.\nConsume: Archive this and roll 1d10.\n1d10 Result\n1 - 3 The haremite's jaw unhooks and swallows your head whole. You die.\n4 - 5 Dissolves in your mouth. +3 survival.\n6+ Gain +1 permanent movement.",
+        "consumable": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 58,
+      "fields": {
+        "name": "Hissing Cockroach",
+        "type": [7],
+        "effect": "Consume: Archive this to lose all survival and gain 2d10 insanity.\nIf you are insane, you must consume this.",
+        "consumable": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 59,
+      "fields": {
+        "name": "Lonely Ant",
+        "type": [7],
+        "effect": "Consume: Archive this to swap your insanity and survival values.",
+        "consumable": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 60,
+      "fields": {
+        "name": "Nightmare Tick",
+        "type": [7],
+        "effect": "Consume: Archive this and roll 1d10.\n1d10 Result\n1 - 3 The tick grabs the roof of your mouth and sucks all your blood. You die.\n4 - 5 Tastes like iron. No effect.\n6+ Gain permanent +1 evasion.",
+        "consumable": true
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 61,
+      "fields": {
+        "name": "Sword Beetle",
+        "type": [7],
+        "effect": "Consume: Archive this and roll 1d10\n1d10 Result\n1 - 3 The beetle burrows into your brain. You die instantly\n4 - 5 Tough and disgusting. No effect.\n6+ Gain permanent +1 strength."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 62,
+      "fields": {
+        "name": "Cabled Vein",
+        "type": [3],
+        "flavor_text": "A dense bundle of bloody tubes.",
+        "monster": true,
+        "monster_origin": 9,
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 63,
+      "fields": {
+        "name": "Dragon Iron",
+        "type": [6],
+        "flavor_text": "It feels heavy, but when dropped, falls as slowly as a feather.",
+        "monster": true,
+        "monster_origin": 9,
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 64,
+      "fields": {
+        "name": "Hardened Ribs",
+        "type": [2],
+        "flavor_text": "Strong, flexible, and hollow.",
+        "monster": true,
+        "monster_origin": 9,
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 65,
+      "fields": {
+        "name": "Horn Fragment",
+        "type": [2],
+        "flavor_text": "Nearby speech causes them to resonate.",
+        "monster": true,
+        "monster_origin": 9,
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 66,
+      "fields": {
+        "name": "Husk",
+        "type": [1],
+        "flavor_text": "A decaying layer of former skin.",
+        "monster": true,
+        "monster_origin": 9,
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 67,
+      "fields": {
+        "name": "King's Claws",
+        "type": [2],
+        "flavor_text": "Disturbingly warm, and sharp enough to draw blood with a touch.",
+        "monster": true,
+        "monster_origin": 9,
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 68,
+      "fields": {
+        "name": "King's Tongue",
+        "type": [1],
+        "flavor_text": "Smooth, dry, and sharp.",
+        "monster": true,
+        "monster_origin": 9,
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 69,
+      "fields": {
+        "name": "Radioactive Dung",
+        "type": [3, 4],
+        "flavor_text": "Gives off smoke with an acrid odor.",
+        "monster": true,
+        "monster_origin": 9,
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 70,
+      "fields": {
+        "name": "Veined Wing",
+        "type": [1],
+        "flavor_text": "Blood drips from it at a constant rate.",
+        "monster": true,
+        "monster_origin": 9,
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 71,
+      "fields": {
+        "name": "Beetle Horn",
+        "type": [2],
+        "effect": "Lock Requires Scarification\nEndeavor Horn Ceremony - Archive and roll 1d10\n1d10 Result\n1-4 Your brain is punctured and you die.\n5+ Brain Stimulation. Gain the benefits of Age 1 and Age 2 without gaining Hunt XP. Brain Stimulation ignores the 'once in a lifetime' rule on the Age story event.",
+        "monster": true,
+        "monster_origin": 11,
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 72,
+      "fields": {
+        "name": "Century Fingernails",
+        "type": [2],
+        "flavor_text": "These nails are never clipped. Instead, they are folded and hammered hundreds of times into an impossibly fine edge.",
+        "monster": true,
+        "monster_origin": 11,
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 73,
+      "fields": {
+        "name": "Century Shell",
+        "type": [1, 6],
+        "flavor_text": "This ancient and mineral-rich armor plate is covered with razor wind scratches.",
+        "effect": "You may spend this as if it were a Scarab Shell resource.",
+        "monster": true,
+        "monster_origin": 11,
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 74,
+      "fields": {
+        "name": "Compound Eye",
+        "type": [3],
+        "flavor_text": "A cluster of differently colored eyes, each filled with a creamy, tangy syrup.",
+        "effect": "If you have 3+ courage, you may consume and archive this to gain +3d10 insanity.",
+        "consumable": true,
+        "monster": true,
+        "monster_origin": 11,
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 75,
+      "fields": {
+        "name": "Elytra",
+        "type": [1, 2, 3],
+        "flavor_text": "The ribbed underside of these large shells makes an ideal surface to grind weapons.",
+        "effect": "A survivor may archive this to give all of their attacks in the next showdown Sharp.",
+        "monster": true,
+        "monster_origin": 11,
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 76,
+      "fields": {
+        "name": "Scarab Shell",
+        "type": [1],
+        "flavor_text": "Cool and oily to the touch. Lantern light reveals a brilliant band of color dancing on its surface.",
+        "monster": true,
+        "monster_origin": 11,
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 77,
+      "fields": {
+        "name": "Scarab Wing",
+        "type": [3],
+        "flavor_text": "When soaked in water, these vein-filled wings gain some elasticity.",
+        "monster": true,
+        "monster_origin": 11,
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.resource",
+      "pk": 78,
+      "fields": {
+        "name": "Underplate Fungus",
+        "type": [1, 5],
+        "flavor_text": "A corkscrew-shaped fungus that grows in the empty channels between the Dung Beetle Knight's armor plating.",
+        "monster": true,
+        "monster_origin": 11,
+        "expansion": 2
       }
     }
-  ]
+]
+  
+  

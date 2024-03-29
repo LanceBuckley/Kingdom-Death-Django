@@ -2,7 +2,7 @@ from rest_framework import serializers
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
-from kingdomdeathapi.models import Resource, ResourceType
+from kingdomdeathapi.models import Resource, ResourceType, Monster, ExpansionType
 
 
 class ResourceView(ViewSet):
@@ -19,6 +19,82 @@ class ResourceView(ViewSet):
             Response: A serialized dictionary and HTTP status 200 OK.
         """
         resources = Resource.objects.all()
+
+        # Define a dictionary mapping query parameters to type IDs
+        type_mappings = {
+            "hide": 1,
+            "bone": 2,
+            "organ": 3,
+            "scrap": 4,
+            "herb": 5,
+            "iron": 6,
+            "vermin": 7,
+            "flower": 8
+        }
+
+        # Iterate over the dictionary and apply filters
+        for param, type_id in type_mappings.items():
+            if request.query_params.get(param) is not None:
+                value = request.query_params.get(param) == 'true'
+                if value:
+                    resources = resources.filter(type__id=type_id)
+                else:
+                    resources = resources.exclude(type__id=type_id)
+
+        bool_mappings = {
+            "consumable": True,
+            "monster": True,
+            "strange": True,
+            "indomitable": True
+        }
+
+        for param, bool_value in bool_mappings.items():
+            if request.query_params.get(param) is not None:
+                value = request.query_params.get(param) == 'true'
+                if value:
+                    resources = resources.filter(**{f"{param}": bool_value})
+                else:
+                    resources = resources.exclude(**{f"{param}": bool_value})
+
+        monster_mappings = {
+            "white_lion": 1,
+            "screaming_antelope": 2,
+            "phoenix": 3,
+            "dragon_king": 9,
+            "dung_beetle_knight": 11,
+        }
+
+        for param, monster_id in monster_mappings.items():
+            if request.query_params.get(param) is not None:
+                value = request.query_params.get(param) == 'true'
+                if value:
+                    resources = resources.filter(monster_origin=monster_id)
+                else:
+                    resources = resources.exclude(monster_origin=monster_id)
+
+        expansion_mappings = {
+            "dragon_king_exp": 1,
+            "dung_beetle_knight_exp": 2,
+            "flower_knight_exp": 3,
+            "gorm_exp": 4,
+            "lion_god_exp": 5,
+            "lion_knight_exp": 6,
+            "lonely_tree_exp": 7,
+            "manhunter_exp": 8,
+            "slenderman_exp": 9,
+            "spidicules_exp": 10,
+            "sunstalker_exp": 11,
+            "gamblers_chest_exp": 12
+        }
+
+        for param, expansion_id in expansion_mappings.items():
+            if request.query_params.get(param) is not None:
+                value = request.query_params.get(param) == 'true'
+                if value:
+                    resources = resources.filter(expansion=expansion_id)
+                else:
+                    resources = resources.exclude(expansion=expansion_id)
+
 
         serializer = ResourceSerializer(resources, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -115,11 +191,23 @@ class ResourceTypeSerializer(serializers.ModelSerializer):
         model = ResourceType
         fields = ('id', 'name',)
 
+class MonsterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Monster
+        fields = ('id', 'name',)
+
+class ExpansionTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ExpansionType
+        fields = ('id', 'name',)
+
 
 class ResourceSerializer(serializers.ModelSerializer):
 
-    type = ResourceTypeSerializer(many=False)
+    type = ResourceTypeSerializer(many=True)
+    monster_origin = MonsterSerializer(many=False)
+    expansion = ExpansionTypeSerializer(many=False)
 
     class Meta:
         model = Resource
-        fields = ('id', 'name', 'type',)
+        fields = ('id', 'name', 'type', 'consumable', 'monster', 'strange', 'indomitable', 'monster_origin', 'expansion', 'flavor_text', 'effect')
