@@ -2,7 +2,8 @@ from rest_framework import serializers
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
-from kingdomdeathapi.models import Ability
+from django.db.models import Q
+from kingdomdeathapi.models import Ability, ExpansionType
 
 
 class AbilityView(ViewSet):
@@ -19,6 +20,13 @@ class AbilityView(ViewSet):
             Response: A serialized dictionary and HTTP status 200 OK.
         """
         abilities = Ability.objects.all()
+
+        if request.query_params.get('expansion') is not None:
+            if request.query_params.get('expansion') == 'true':
+                # The Q() syntax selects objects that follow the expression within the brackets. The ~ negates the expression
+                abilities = abilities.filter(~Q(expansion=None))
+            if request.query_params.get('expansion') == 'false':
+                abilities = abilities.filter(expansion__isnull=True)
 
         serializer = AbilitySerializer(abilities, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -103,10 +111,18 @@ class AbilityView(ViewSet):
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Ability.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
+        
+        
+class ExpansionTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ExpansionType
+        fields = ('id', 'name',)
 
 
 class AbilitySerializer(serializers.ModelSerializer):
 
+    expansion = ExpansionTypeSerializer(many=False)
+
     class Meta:
         model = Ability
-        fields = ('id', 'name', )
+        fields = ('id', 'name', 'effect', 'expansion')

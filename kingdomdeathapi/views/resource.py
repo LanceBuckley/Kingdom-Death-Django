@@ -2,6 +2,7 @@ from rest_framework import serializers
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
+from django.db.models import Q
 from kingdomdeathapi.models import Resource, ResourceType, Monster, ExpansionType
 
 
@@ -95,6 +96,12 @@ class ResourceView(ViewSet):
                 else:
                     resources = resources.exclude(expansion=expansion_id)
 
+        if request.query_params.get('expansion') is not None:
+            if request.query_params.get('expansion') == 'true':
+                # The Q() syntax selects objects that follow the expression within the brackets. The ~ negates the expression
+                resources = resources.filter(~Q(expansion=None))
+            if request.query_params.get('expansion') == 'false':
+                resources = resources.filter(expansion__isnull=True)
 
         serializer = ResourceSerializer(resources, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
