@@ -1,0 +1,26 @@
+[
+    {
+        "model": "kingdomdeathapi.campaign",
+        "pk": 1,
+        "fields": {
+          "name": "People of the Lantern",
+          "years": 25
+        }
+    },
+    {
+        "model": "kingdomdeathapi.campaign",
+        "pk": 2,
+        "fields": {
+          "name": "People of the Sun",
+          "years": 25
+        }
+    },
+    {
+        "model": "kingdomdeathapi.campaign",
+        "pk": 3,
+        "fields": {
+          "name": "People of the Stars",
+          "years": 25
+        }
+    }
+]

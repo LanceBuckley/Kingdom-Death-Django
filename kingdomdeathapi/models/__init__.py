@@ -13,3 +13,6 @@ from .survivor import Survivor
 from .settlement_inventory import SettlementInventory
 from .settlement_event import SettlementEvent
 from .session import Session
+from .expansion_type import ExpansionType
+from .impairment import Impairment
+from .campaign import Campaign

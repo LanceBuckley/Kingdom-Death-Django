@@ -3,70 +3,439 @@
       "model": "kingdomdeathapi.fightingart",
       "pk": 1,
       "fields": {
-        "name": "Ambidextrous"
+        "name": "Ambidextrous",
+        "effect": "All melee weapons in your gear grid gain paired.\nAmbidextrous cannot be used if there are any shields, two-handed, or heavy gear in your gear grid."
       }
     },
     {
       "model": "kingdomdeathapi.fightingart",
       "pk": 2,
       "fields": {
-        "name": "Berserker"
+        "name": "Berserker",
+        "effect": "Once per showdown, you may spend Activation to suffer bash and the frenzy brain trauma."
       }
     },
     {
       "model": "kingdomdeathapi.fightingart",
       "pk": 3,
       "fields": {
-        "name": "Clutch Fighter"
+        "name": "Clutch Fighter",
+        "effect": "While you have 3 or more bleeding tokens, gain +1 strength and +1 accuracy."
       }
     },
     {
       "model": "kingdomdeathapi.fightingart",
       "pk": 4,
       "fields": {
-        "name": "Combo Master"
+        "name": "Combo Master",
+        "effect": "On a perfect hit make 1 additional attack roll."
       }
     },
     {
       "model": "kingdomdeathapi.fightingart",
       "pk": 5,
       "fields": {
-        "name": "Crazed"
+        "name": "Crazed",
+        "effect": "On a perfect hit, gain +1 insanity."
       }
     },
     {
       "model": "kingdomdeathapi.fightingart",
       "pk": 6,
       "fields": {
-        "name": "Crossarm Block"
+        "name": "Crossarm Block",
+        "effect": "Whenever you are hit, after hit locations are rolled, you may change 1 result to the arms hit location."
       }
     },
     {
       "model": "kingdomdeathapi.fightingart",
       "pk": 7,
       "fields": {
-        "name": "Double Dash"
+        "name": "Double Dash",
+        "effect": "During your act, once per round, you may spend Activation to gain Movement"
       }
     },
     {
       "model": "kingdomdeathapi.fightingart",
       "pk": 8,
       "fields": {
-        "name": "Extra Sense"
+        "name": "Extra Sense",
+        "effect": "You may dodge 1 additional time per round."
       }
     },
     {
       "model": "kingdomdeathapi.fightingart",
       "pk": 9,
       "fields": {
-        "name": "Last Man Standing"
+        "name": "Last Man Standing",
+        "effect": "While you are the only survivor on the showdown board, you may not gain bleeding tokens or be knocked down."
       }
     },
     {
       "model": "kingdomdeathapi.fightingart",
       "pk": 10,
       "fields": {
-        "name": "Leader"
+        "name": "Leader",
+        "effect": "Whenever you encourage a survivor, they gain +1 speed token until the end of the round.\nOnce per hunt phase, you may inspire another survivor. They use your understanding and courage to resolve a hunt or story event.\n(Example: if you have 3+ courage you can inspire another survivor to walk the path of the brave during Overwhelming Darkness.)"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 11,
+      "fields": {
+        "name": "Mighty Strike",
+        "effect": "On a perfect hit, gain +2 strength until the end of the attack."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 12,
+      "fields": {
+        "name": "Monster Claw Style",
+        "effect": "Your Fist & Tooth attacks gain +1 accuracy, +1 strength and savage."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 13,
+      "fields": {
+        "name": "Orator of Death",
+        "effect": "Once per showdown, you may spend Activation to have all non-deaf survivors gain +2 insanity.\nWhen you die, you encourage all survivors with your last words."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 14,
+      "fields": {
+        "name": "Rhythm Chaser",
+        "effect": "On Arrival, gain +1 evasion token. When you are knocked down, if you don't have an instrument in your gear grid, remove all your +1 evasion tokens. Rhythm Chaser cannot be used if there is any heavy gear in your gear grid."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 15,
+      "fields": {
+        "name": "Strategist",
+        "effect": "During the showdown setup, after placing terrain, you may add a Giant Stone Face or a Toppled Pillar terrain card to the showdown board."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 16,
+      "fields": {
+        "name": "Thrill Seeker",
+        "effect": "Whenever you gain survival during the showdown phase, gain 1 additional survival."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 17,
+      "fields": {
+        "name": "Timeless Eye",
+        "effect": "Your attack roll is a perfect hit on a result of 9 or 10. You cannot use Timeless Eye if you have the blind severe head injury."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 18,
+      "fields": {
+        "name": "Tough",
+        "effect": "When rolling on a severe injury table, unless you roll a 1, add +1 to the result. (This does not include brain trauma. The result cannot exceed 10.)"
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 19,
+      "fields": {
+        "name": "Tumble",
+        "effect": "When something would collide with you, roll 1d10. On a result of 6+, you successfully tumble out of harms way. Instead, place your survivor standing on the closest free space outside of the collision path."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 20,
+      "fields": {
+        "name": "Unconscious Fighter",
+        "effect": "It takes 7 bleeding tokens to kill you."
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 21,
+      "fields": {
+        "name": "Acrobatics",
+        "effect": "When you are adjacent to the monster, you may spend Movement to place your survivor on any other space adjacent to the monster.",
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 22,
+      "fields": {
+        "name": "Champion's Rite",
+        "effect": "Before making an attack, you may add your understanding to your accuracy attribute for that attack.\nLimit, once per showdown.",
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 23,
+      "fields": {
+        "name": "Fated Blow",
+        "effect": "Once per showdown, you may give your next wound attempt +2 strength and Devastating 1.",
+        "expansion": 1
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 24,
+      "fields": {
+        "name": "Carapace of Will",
+        "effect": "On Arrival, gain the Steadfast survivor status card. When you are attacked, if you have 2+ steadfast tokens, ignore a hit and remove all your steadfast tokens.",
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 25,
+      "fields": {
+        "name": "Propulsion Drive",
+        "effect": "On Arrival, gain the Momentum survivor status card. When you attack, if you have 5+ momentum tokens, remove them all and roll 1d10. Gain that amount of luck and strength when attempting to wound the first selected hit location for this attack.",
+        "expansion": 2
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 26,
+      "fields": {
+        "name": "Otherworldly Luck",
+        "effect": "During the hunt and settlement phase, whenever you roll on a table, you may add +1 to the roll result. This may not exceed the highest possible result of that table. (This includes Hunt Events, Story Events, Endeavors, Settlement Events, etc)",
+        "expansion": 3
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 27,
+      "fields": {
+        "name": "Lure Epilepsy",
+        "effect": "Once per showdown, you may spend Activation to give yourself a seizure. You suffer a random brain trauma and are knocked down.",
+        "expansion": 4
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 28,
+      "fields": {
+        "name": "Mammoth Hunting",
+        "effect": "Gain +1 strength when attacking from adjacent spaces outside the monster's facing and blind spot.",
+        "expansion": 4
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 29,
+      "fields": {
+        "name": "Burning Focus",
+        "effect": "If you have 0 survival at the start of your act, gain 1 survival.",
+        "expansion": 5
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 30,
+      "fields": {
+        "name": "Heroic",
+        "effect": "Once per showdown, if you are standing adjacent to the monster and have 3+ survival, you may spend all of your survival for one automatic hit that inflicts a critical wound.",
+        "expansion": 5
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 31,
+      "fields": {
+        "name": "Ruthless",
+        "effect": "Whenever a survivor dies during the showdown, roll 1d10. On a 7+, gain a Skull basic resource.",
+        "expansion": 5
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 32,
+      "fields": {
+        "name": "Unrelenting",
+        "effect": "If all of your attack rolls in an attack miss, you may spend 1 survival to re-roll all attack rolls.",
+        "expansion": 5
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 33,
+      "fields": {
+        "name": "Headliner",
+        "effect": "When you become doomed or gain the priority target token, you may choose to gain +1 survival or +1 strength token.",
+        "expansion": 6
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 34,
+      "fields": {
+        "name": "Tenacious",
+        "effect": "When your wound attempt on a hit location is a failure, you may put that hit location back on top of the deck instead of in the discard pile. Limit, once per round.",
+        "expansion": 6
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 35,
+      "fields": {
+        "name": "Wardrobe Expert",
+        "effect": "When you suffer a severe injury at a hit location, you may archive a gear worn at that location to ignore it and gain +1 survival.",
+        "expansion": 6
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 36,
+      "fields": {
+        "name": "Abyssal Sadist",
+        "effect": "The first time you wound the monster each attack, gain +1 survival and +1 insanity.\nIgnore the effects of the Fear of the Dark and Prey disorders.",
+        "expansion": 8
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 37,
+      "fields": {
+        "name": "Seasoned Hunter",
+        "effect": "Whenever a random hunt event result is: 11, 22, 33, 44, 55, 66, 77, 88, 99, or 100, the event revealer gains +1 understanding and +1 courage.",
+        "expansion": 8
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 38,
+      "fields": {
+        "name": "Trailblazer",
+        "effect": "The hunting party may start the hunt phase 1 space closer to the monster. At the start of the showdown, all survivors gain +1 survival and up to +1 insanity.",
+        "expansion": 8
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 39,
+      "fields": {
+        "name": "Transcended Masochist",
+        "effect": "When you gain a bleeding token, gain +1 survival and +1 insanity. Ignore the effects of the Aichmophobia and Apathetic disorders.",
+        "expansion": 8
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 40,
+      "fields": {
+        "name": "Blotted Out",
+        "effect": "Whenever you suffer a brain trauma, gain a bleeding token.",
+        "expansion": 9
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 41,
+      "fields": {
+        "name": "Phantom Friend",
+        "effect": "The first time you gain a resource during a showdown, you may feed it to your phantom friend. If you do, archive the resource and gain +1 evasion token.\nLose this token if you are deaf or become deaf during the showdown.",
+        "expansion": 9
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 42,
+      "fields": {
+        "name": "Harvestman",
+        "effect": "Gain +3 movement. Whenever you are knocked down, gain -1 movement token.\nIf you have the Tiny Arachnophobia disorder, you are too scared of spiders to imitate them and you cannot use this fighting art.",
+        "expansion": 10
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 43,
+      "fields": {
+        "name": "Vengeance",
+        "effect": "When a survivor dies during the showdown, gain +4 survival and +1 strength token.",
+        "expansion": 10
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 44,
+      "fields": {
+        "name": "Burning Ambition",
+        "effect": "When you are instructed to skip the next hunt, ignore it.\nThe 'Skip Next Hunt' box on your survivor record sheet cannot be filled in.",
+        "expansion": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 45,
+      "fields": {
+        "name": "Defender",
+        "effect": "When a survivor adjacent to you is knocked down, you may spend 1 survival. If you do, they stand and gain +1 survival from your words of encouragement.\nYou cannot use this if you have the shattered jaw severe injury.",
+        "expansion": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 46,
+      "fields": {
+        "name": "Purpose",
+        "effect": "Your comrades make you strong enough to exceed the limits of death itself.\nDuring the showdown, if you would gain a lethal number of bleeding tokens while there are any other standing survivors, roll 1d10. On a 6+, you live but are knocked down. You will not bleed to death until you gain another bleeding token.",
+        "expansion": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 47,
+      "fields": {
+        "name": "Sneak Attack",
+        "effect": "When you attack a monster from its blind spot, gain +4 strength for that attack.",
+        "expansion": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 48,
+      "fields": {
+        "name": "Trick Attack",
+        "effect": "Once per showdown, when you wound a monster from its blind spot, a survivor adjacent to you may gain the priority target token.",
+        "expansion": 11
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 49,
+      "fields": {
+        "name": "Bloodzerker",
+        "effect": "Gain +1 strength for each of your bleeding tokens. When you have 3+ bleeding tokens, you lose yourself to the blood and are guardless!",
+        "expansion": 12
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 50,
+      "fields": {
+        "name": "Glass Mask",
+        "effect": "When you depart, you lightly cut your ears, rub blood all over your face, and wait for it to dry. Gain +3 insanity.\nIf you have Face Painting, you create a seal between your glass mask and your armor. Gain an additional +3 insanity.",
+        "expansion": 12
+      }
+    },
+    {
+      "model": "kingdomdeathapi.fightingart",
+      "pk": 51,
+      "fields": {
+        "name": "Invigorator",
+        "effect": "Gain +1 accuracy and +1 speed while you have no insanity.",
+        "expansion": 12
       }
     }
   ]
